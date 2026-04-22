@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed-dim": "#56de9f",
+                    "surface-bright": "#f8f9fa",
+                    "primary-fixed": "#c0e8ff",
+                    "secondary-container": "#fdd73b",
+                    "primary-container": "#4cb9e7",
+                    "surface-container-highest": "#e1e3e4",
+                    "primary": "#006686",
+                    "primary-fixed-dim": "#70d2ff",
+                    "on-primary-fixed": "#001e2b",
+                    "secondary-fixed": "#ffe173",
+                    "tertiary": "#006c46",
+                    "outline": "#6e797f",
+                    "outline-variant": "#bdc8cf",
+                    "surface-tint": "#006686",
+                    "on-primary-fixed-variant": "#004d66",
+                    "secondary-fixed-dim": "#e8c426",
+                    "on-surface": "#191c1d",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#002112",
+                    "on-surface-variant": "#3e484e",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed": "#221b00",
+                    "inverse-surface": "#2e3132",
+                    "on-error": "#ffffff",
+                    "on-primary": "#ffffff",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "on-background": "#191c1d",
+                    "secondary": "#705d00",
+                    "inverse-primary": "#70d2ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-container": "#004b2f",
+                    "on-secondary-fixed-variant": "#554500",
+                    "error": "#ba1a1a",
+                    "tertiary-container": "#36c487",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "tertiary-fixed": "#75fbb9",
+                    "on-secondary-container": "#715d00",
+                    "background": "#f8f9fa",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-lowest": "#ffffff",
+                    "surface": "#f8f9fa",
+                    "on-primary-container": "#00475e",
+                    "on-error-container": "#93000a",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap-md": "16px",
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "element-gap-lg": "32px",
+                    "container-margin": "24px",
+                    "element-gap-sm": "8px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "label-bold": ["Lexend"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .sky-bg {
+            background: linear-gradient(180deg, #38bdf8 0%, #bae6fd 100%);
+        }
+        .rainbow-gradient {
+            background: linear-gradient(90deg, #ff6b6b, #feca57, #48dbfb, #1dd1a1, #ff9ff3);
+        }
+        .bouncy-shadow {
+            box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.1);
+        }
+        .press-effect:active {
+            transform: translateY(4px);
+            box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background font-body-md text-on-background min-h-screen sky-bg pb-24 overflow-x-hidden">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-sky-400 dark:bg-sky-900 shadow-[0_4px_0_0_rgba(0,0,0,0.2)] rounded-b-3xl border-b-4 border-sky-600/30">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-white border-2 border-yellow-400 flex items-center justify-center overflow-hidden">
+<img alt="Mascot" class="w-full h-full object-contain" data-alt="A cheerful colorful bird mascot with big eyes and a friendly smile, wearing a tiny school cap, cartoon style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAILAs3cNvF24qYzvFJnfnUSNQ1DD2QIaOMBFg4QWRGiz_pZlsKu6-QUnWMA0g4LecCFD-qo3ZicaHsuo7MN9mLTAvLCsCiS2KLsj_anhlqos54DBqswKVGtztAybmdt9mhJYdnXFRSmXaTLtQJEYN7XpDLNAsgdPF3xLT71GCsSqs3zMD1i2QrhX2-72EO6NP3Pp5KFBf_O57xNlBgru_kfkRVHR4UBzqpse1e6KtvFkE9AIidPKZEdxq5u5fhLOl5oMX_d8ue7r6N"/>
+</div>
+<span class="font-lexend font-bold text-lg text-white">Selam, Defne!</span>
+</div>
+<div class="flex items-center gap-4">
+<div class="bg-white/20 px-3 py-1 rounded-full flex items-center gap-2 text-white font-bold">
+<span class="material-symbols-outlined text-yellow-400" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>450</span>
+</div>
+<button class="material-symbols-outlined text-white hover:scale-105 transition-transform">settings</button>
+</div>
+</nav>
+<!-- Game Canvas -->
+<main class="pt-24 px-6 max-w-lg mx-auto flex flex-col gap-8">
+<!-- Header & Progress -->
+<header class="text-center space-y-4">
+<div class="inline-block bg-white/30 backdrop-blur-sm px-6 py-2 rounded-full border-2 border-white/50">
+<h1 class="text-headline-md font-headline-md text-white drop-shadow-md">İngilizce Gökyüzü</h1>
+</div>
+<!-- Progress Bar -->
+<div class="w-full h-8 bg-sky-200/50 rounded-full p-1 border-2 border-white/40 relative">
+<div class="h-full bg-tertiary-container rounded-full w-3/4 flex items-center justify-end pr-2 transition-all duration-1000">
+<span class="material-symbols-outlined text-white text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<div class="absolute -top-6 right-0 bg-secondary-container text-on-secondary-container font-label-bold px-3 py-1 rounded-lg shadow-md border-b-4 border-secondary">
+                    LEVEL 4
+                </div>
+</div>
+</header>
+<!-- Question Section -->
+<section class="bg-white rounded-xl p-8 border-b-8 border-slate-200 shadow-xl relative mt-4">
+<!-- Mascot Buddy -->
+<div class="absolute -top-16 -left-4 w-32 h-32">
+<img alt="Buddy" class="w-full h-full object-contain drop-shadow-lg" data-alt="vibrant blue and yellow bird cartoon character with big expressive eyes, pointing towards the center of the screen, cheerful aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCycnateMWx6PScobNb972JMON7wt_MD1LXSKYfG7cxONzUgVuksCp41D5sTxOnLB-716LXLYZZBlXzC8PDgLOp9biCJYnP215GSy8Ypk7l0McMNEPAXoc_27q6lvIhL1hEUOeuQpIAHq8z5pfM8Np8u_46lgPdgdvS4akzNXJzUkz-u3epWb9wlr3bc4ROrw2boZBw9BQgy0sif7aosvnGatAFVB2Z-XnCZHs2wLkekTVEHpbXUC2T89CLqxZi1isXy7uAxqOxz29R"/>
+</div>
+<div class="ml-24 text-left">
+<div class="bg-surface-container-low rounded-2xl p-4 relative after:content-[''] after:absolute after:left-0 after:top-1/2 after:-translate-x-full after:-translate-y-1/2 after:border-[12px] after:border-transparent after:border-r-surface-container-low">
+<p class="text-body-lg font-headline-md text-primary">"Hangi kelime <strong class="text-secondary">SARI</strong> rengi temsil eder?"</p>
+</div>
+</div>
+</section>
+<!-- Interactive Cloud Bubbles -->
+<section class="grid grid-cols-2 gap-gutter">
+<!-- Cloud 1 -->
+<button class="press-effect group relative bg-white rounded-[2rem] p-6 text-center border-b-[6px] border-sky-100 shadow-lg hover:bg-sky-50 transition-colors">
+<div class="absolute -top-4 -right-2 bg-pink-100 text-pink-500 rounded-full p-1 shadow-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-sm">favorite</span>
+</div>
+<img alt="Cloud" class="w-20 mx-auto mb-2" data-alt="soft fluffy white cloud icon with a gentle blue stroke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGGGOhoYUbhExF37acRF6T6CV6rjGDZ8RLBx4JLmWYS4F60OQ-zsMqQxRc9jL-X9GsmzxLmanr0R-tKqWcqiEDudVvVQ1rvzsdYXMHO3sR5a1pfYJoeuFHolQQAFn6Y8xsNU5lB1sonC62uT2gs_w5GKiSq0g8zVN_MFAAV8XryJyFokUBT8AnW3kLZyWey7cC3Q3Xk4i7N-azlhpxAsBTOuIiSukVJqnRZY_p80fGBEcoeHbhs8zjEG7y5LG_l5SNfZSXQiUUz6cd"/>
+<span class="text-headline-md font-headline-md text-primary-container">Blue</span>
+</button>
+<!-- Cloud 2 - The Correct One -->
+<button class="press-effect group relative bg-white rounded-[2rem] p-6 text-center border-b-[6px] border-yellow-200 shadow-lg ring-4 ring-yellow-400 ring-offset-4 ring-offset-sky-300">
+<div class="absolute -top-4 -left-2 bg-yellow-100 text-yellow-600 rounded-full p-2 shadow-sm">
+<span class="material-symbols-outlined text-lg" style="font-variation-settings: 'FILL' 1;">lightbulb</span>
+</div>
+<img alt="Cloud" class="w-20 mx-auto mb-2" data-alt="soft fluffy white cloud icon with a gentle blue stroke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJ0iDN-rGDDJXzPRaI3HDTKAKqvVrnshw4bnLGQh0XEB8U7V69ZJQuQULVtuo-EzyehoJUDPqnHxUtIkq2dp-CiGd3ew08i7964HpI1kWcU-rx8Lb-O-XzQe6JMWfLzAZwg39NXiL0dr5M8xo0ncvYXb8_NbHGAHz3K75va_TdWj-DFnCP1D1We2PERKuij8UQvijPXrlNWQ2HxeGC_CfNNGJe6O3HFy6kby054zA4R5nBL7CJXxne2SMzX2O2lDp3Tf1atxColICU"/>
+<span class="text-headline-md font-headline-md text-secondary">Yellow</span>
+</button>
+<!-- Cloud 3 -->
+<button class="press-effect group bg-white rounded-[2rem] p-6 text-center border-b-[6px] border-sky-100 shadow-lg hover:bg-sky-50 transition-colors">
+<img alt="Cloud" class="w-20 mx-auto mb-2" data-alt="soft fluffy white cloud icon with a gentle blue stroke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZ-0Aq-cIhKZmaUWtoAXqPara-T7j9e7TriZ7-vfk44PRCAfVMIud5j4IVKS4RL8Cf0e6QSTF8F-tCiEsc8_1aE_ogkS8KlFhi-oyF4RwpVfL7kRzxyrbxeg2uziUcbSHWLn2FHvzAEigUqlHDW1KD532HMeVkWsptrYi52aE3OSHe6aXSq97Bmy1kVVxtduUVDFTCAAwg5ZKP2v0c2-pb2FKXn4rR4ycoWSEJYSGRV4vDpIqq6n-cD8Ce4xdSFcUkMcqxC0XEUOIv"/>
+<span class="text-headline-md font-headline-md text-tertiary-container">Green</span>
+</button>
+<!-- Cloud 4 -->
+<button class="press-effect group bg-white rounded-[2rem] p-6 text-center border-b-[6px] border-sky-100 shadow-lg hover:bg-sky-50 transition-colors">
+<img alt="Cloud" class="w-20 mx-auto mb-2" data-alt="soft fluffy white cloud icon with a gentle blue stroke" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAi9RZl49l2RDq6pKoti6I7hY9QNDfm-Ms8q2E3zjKqeJ-r3NVPEV0Zo6hN8I7HE9_tcU8zjAXXG_LgZ_S9act4V2afK5pnLE-K7krpjNQx0aLEROjz-5-dqBwJemrj2Naksb-dbmqIex0TWBNAe4xm4RjBwhVHk_J271MglyuFWACkls6hlV_uHDzSR-BC83X0YG7uTlilnKXfNh0eYSrcXMDl3SfVoRhuRNv5-w-xf0vFvUl68pY3m70__PISu1FM-dKpenm74XQz"/>
+<span class="text-headline-md font-headline-md text-pink-400">Red</span>
+</button>
+</section>
+<!-- Rainbow Decorative Element -->
+<div class="w-full h-12 rounded-full rainbow-gradient opacity-40 blur-xl"></div>
+</main>
+<!-- Success Feedback Overlay (Hidden by default, shown for context) -->
+<div class="hidden fixed inset-0 bg-sky-500/20 backdrop-blur-[2px] z-[60] flex items-center justify-center p-6">
+<div class="bg-white rounded-[3rem] p-10 text-center shadow-2xl border-b-8 border-tertiary transform scale-110">
+<span class="material-symbols-outlined text-[80px] text-tertiary-fixed-dim mb-4" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<h2 class="text-headline-lg font-headline-lg text-primary mb-2">Harika!</h2>
+<p class="text-body-lg text-outline mb-6">"Yellow" sarı demek!</p>
+<button class="bg-secondary-container text-on-secondary-container px-12 py-4 rounded-2xl text-headline-md font-headline-md shadow-[0_6px_0_0_#715d00] active:translate-y-1 active:shadow-none transition-all">
+                DEVAM ET
+            </button>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 h-24 bg-white dark:bg-slate-900 rounded-t-[40px] border-t-4 border-slate-100 dark:border-slate-800 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="forest">forest</span>
+<span class="font-lexend font-medium text-[12px]">Orman</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-yellow-400 text-white rounded-2xl px-4 py-1 shadow-[0_4px_0_0_#ca8a04] -translate-y-2 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="cloud" style="font-variation-settings: 'FILL' 1;">cloud</span>
+<span class="font-lexend font-medium text-[12px]">Gökyüzü</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-lexend font-medium text-[12px]">Kütüphane</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined" data-icon="face_6">face_6</span>
+<span class="font-lexend font-medium text-[12px]">Profil</span>
+</a>
+</nav>
+<!-- Contextual FAB -->
+<button class="fixed bottom-28 right-6 w-16 h-16 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center shadow-[0_6px_0_0_#715d00] active:translate-y-1 active:shadow-none transition-all z-40">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">help</span>
+</button>
+</body></html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#705d00",
+                    "outline": "#6e797f",
+                    "on-surface": "#191c1d",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#006686",
+                    "primary": "#006686",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed-dim": "#e8c426",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#70d2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#36c487",
+                    "on-primary-fixed-variant": "#004d66",
+                    "surface": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-container": "#004b2f",
+                    "primary-fixed": "#c0e8ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#bdc8cf",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "on-primary-container": "#00475e",
+                    "on-tertiary-fixed": "#002112",
+                    "surface-container": "#edeeef",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#3e484e",
+                    "secondary-fixed": "#ffe173",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#70d2ff",
+                    "on-secondary-fixed-variant": "#554500",
+                    "inverse-surface": "#2e3132",
+                    "tertiary": "#006c46",
+                    "primary-container": "#4cb9e7",
+                    "tertiary-fixed": "#75fbb9",
+                    "on-primary-fixed": "#001e2b",
+                    "secondary-container": "#fdd73b",
+                    "on-secondary-container": "#715d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "container-margin": "24px",
+                    "element-gap-lg": "32px",
+                    "element-gap-sm": "8px",
+                    "element-gap-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "label-bold": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "body-md": ["Lexend"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .block-shadow {
+            box-shadow: 0 6px 0 0 rgba(0, 0, 0, 0.1);
+        }
+        .block-active-shadow {
+            box-shadow: 0 6px 0 0 currentColor;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen flex flex-col relative overflow-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-sky-400 rounded-b-[32px] border-b-4 border-sky-500 shadow-[0_6px_0_0_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-white bg-white">
+<img alt="Friendly Learning Buddy" data-alt="A friendly, smiling cartoon blue bird character with large expressive eyes and a colorful graduation cap." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmQ8x4xyZ6bV3gFeIjYe1BUEaQcQoiaEfLrvm25S5Bqi9aHaeR1KSYChzI6wXYU1ksDHy8j-3WtFr6hz6BuLDHLLB7QtiWVdGafQNe-BYqPptu0SiPypYn-QMEnak5CFuVaSs0PW0VQNpLvBPV4bZ0OovGP4_FjgLWVU0gEj1T_AhRvgntyAfQTehWd819qmgt4K6G6uvslA5SN3VKvXndm6zvSlyxmXylATMdI4zXd9AFj8PKa_tjLxvQNS2bsPc8dIf0CVwHJomi"/>
+</div>
+<h1 class="font-['Lexend'] font-bold text-lg text-white">Kâşif Defne</h1>
+</div>
+<div class="flex items-center gap-3 bg-white/20 px-4 py-2 rounded-full backdrop-blur-sm border border-white/30">
+<span class="material-symbols-outlined text-white" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-label-bold text-white">125</span>
+</div>
+</header>
+<!-- Main Game Canvas -->
+<main class="flex-grow pt-28 pb-32 px-container-margin flex flex-col items-center justify-start gap-element-gap-lg">
+<!-- Instruction Panel -->
+<section class="w-full max-w-2xl bg-white rounded-lg p-6 border-4 border-primary-container shadow-[0_8px_0_0_#4cb9e7] relative">
+<div class="absolute -top-4 -right-4 bg-secondary-container p-2 rounded-2xl border-4 border-secondary shadow-[0_4px_0_0_#705d00]">
+<span class="material-symbols-outlined text-on-secondary-container">lightbulb</span>
+</div>
+<div class="flex flex-col gap-2">
+<h2 class="font-headline-md text-primary">Haydi Cümle Kuralım!</h2>
+<p class="font-body-md text-outline">Aşağıdaki kelimeleri doğru sıraya dizerek anlamlı bir cümle oluşturabilir misin?</p>
+</div>
+</section>
+<!-- Game Area / Workspace -->
+<div class="w-full max-w-4xl flex-grow flex flex-col items-center justify-center gap-12 relative">
+<!-- Target Zones (Visual guide) -->
+<div class="flex flex-wrap justify-center gap-4 w-full">
+<div class="w-32 h-20 rounded-2xl border-4 border-dashed border-outline-variant bg-surface-container-low"></div>
+<div class="w-32 h-20 rounded-2xl border-4 border-dashed border-outline-variant bg-surface-container-low"></div>
+<div class="w-32 h-20 rounded-2xl border-4 border-dashed border-outline-variant bg-surface-container-low"></div>
+</div>
+<!-- Draggable Word Blocks -->
+<div class="flex flex-wrap justify-center gap-6">
+<!-- Block 1 -->
+<button class="group relative bg-primary-container text-white px-8 py-4 rounded-2xl border-b-8 border-primary active:translate-y-2 active:border-b-0 transition-all duration-75">
+<span class="font-headline-md text-white drop-shadow-md">okuyor</span>
+</button>
+<!-- Block 2 (Selected/Glowing State) -->
+<button class="group relative bg-secondary-container text-on-secondary-container px-8 py-4 rounded-2xl border-b-8 border-secondary ring-4 ring-yellow-300 ring-offset-4 active:translate-y-2 active:border-b-0 transition-all duration-75">
+<span class="font-headline-md drop-shadow-sm">Defne</span>
+</button>
+<!-- Block 3 -->
+<button class="group relative bg-tertiary-container text-on-tertiary-container px-8 py-4 rounded-2xl border-b-8 border-tertiary active:translate-y-2 active:border-b-0 transition-all duration-75">
+<span class="font-headline-md drop-shadow-sm">kitap</span>
+</button>
+</div>
+<!-- Background Theme Elements (Library/Study Room Concept) -->
+<div class="absolute -z-10 bottom-0 left-0 w-full h-full opacity-10 pointer-events-none overflow-hidden">
+<div class="absolute bottom-0 left-10 w-48 h-64 bg-slate-300 rounded-t-xl border-4 border-slate-400 flex flex-col justify-around p-4">
+<div class="h-4 w-full bg-slate-400 rounded-full"></div>
+<div class="h-4 w-full bg-slate-400 rounded-full"></div>
+<div class="h-4 w-full bg-slate-400 rounded-full"></div>
+</div>
+<div class="absolute bottom-0 right-10 w-32 h-48 bg-slate-300 rounded-t-xl border-4 border-slate-400 flex flex-col justify-around p-4">
+<div class="h-4 w-full bg-slate-400 rounded-full"></div>
+<div class="h-4 w-full bg-slate-400 rounded-full"></div>
+</div>
+</div>
+</div>
+<!-- Chunky Progress Bar -->
+<footer class="w-full max-w-2xl flex flex-col gap-3">
+<div class="flex justify-between items-end px-2">
+<span class="font-label-bold text-tertiary">Harika gidiyorsun!</span>
+<span class="font-label-bold text-outline">3 / 10</span>
+</div>
+<div class="h-8 w-full bg-surface-container-highest rounded-full border-4 border-white shadow-inner overflow-hidden p-1">
+<div class="h-full bg-tertiary-container rounded-full relative" style="width: 30%;">
+<div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-2 bg-white rounded-full p-1 shadow-md">
+<span class="material-symbols-outlined text-tertiary text-xs" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</footer>
+</main>
+<!-- Navigation Shell (BottomNavBar) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-4 h-24 bg-white rounded-t-[32px] border-t-4 border-slate-100 shadow-[0_-8px_20px_rgba(0,0,0,0.05)]">
+<!-- Map Tab -->
+<div class="flex flex-col items-center justify-center text-slate-400 px-6 py-2 hover:bg-sky-50 rounded-2xl transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-['Lexend'] font-medium text-[12px]">Harita</span>
+</div>
+<!-- Lessons Tab (ACTIVE) -->
+<div class="flex flex-col items-center justify-center bg-yellow-400 text-slate-900 rounded-2xl px-6 py-2 shadow-[0_4px_0_0_#ca8a04] -translate-y-2 transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-['Lexend'] font-medium text-[12px]">Dersler</span>
+</div>
+<!-- Treasure Tab -->
+<div class="flex flex-col items-center justify-center text-slate-400 px-6 py-2 hover:bg-sky-50 rounded-2xl transition-all cursor-pointer">
+<span class="material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
+<span class="font-['Lexend'] font-medium text-[12px]">Hazine</span>
+</div>
+</nav>
+<!-- FAB Action (Contextual: Submit/Check) -->
+<button class="fixed bottom-28 right-8 w-20 h-20 rounded-full bg-tertiary text-white shadow-[0_8px_0_0_#004b2f] flex items-center justify-center hover:scale-105 active:translate-y-2 active:shadow-none transition-all z-40">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</button>
+</body></html>

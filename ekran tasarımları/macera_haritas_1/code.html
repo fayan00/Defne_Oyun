@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#705d00",
+                    "primary-container": "#4cb9e7",
+                    "tertiary-fixed": "#75fbb9",
+                    "outline": "#6e797f",
+                    "error": "#ba1a1a",
+                    "background": "#f8f9fa",
+                    "on-primary-fixed": "#001e2b",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "tertiary": "#006c46",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-dim": "#d9dadb",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "surface-container": "#edeeef",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#70d2ff",
+                    "on-secondary-fixed": "#221b00",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "secondary-container": "#fdd73b",
+                    "on-error-container": "#93000a",
+                    "surface": "#f8f9fa",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#006686",
+                    "outline-variant": "#bdc8cf",
+                    "on-surface": "#191c1d",
+                    "tertiary-container": "#36c487",
+                    "primary-fixed": "#c0e8ff",
+                    "on-tertiary-fixed": "#002112",
+                    "on-surface-variant": "#3e484e",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-container": "#004b2f",
+                    "primary": "#006686",
+                    "on-secondary-fixed-variant": "#554500",
+                    "on-error": "#ffffff",
+                    "on-background": "#191c1d",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-tertiary": "#ffffff",
+                    "secondary-fixed": "#ffe173",
+                    "on-secondary-container": "#715d00",
+                    "surface-bright": "#f8f9fa",
+                    "on-primary-container": "#00475e",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-fixed-dim": "#70d2ff",
+                    "secondary-fixed-dim": "#e8c426",
+                    "on-primary-fixed-variant": "#004d66",
+                    "surface-variant": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "element-gap-sm": "8px",
+                    "element-gap-md": "16px",
+                    "element-gap-lg": "32px",
+                    "container-margin": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-lg": ["Lexend"],
+                    "label-bold": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "headline-xl": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "headline-lg": ["Lexend"]
+            },
+            "fontSize": {
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .island-card:active {
+            transform: translateY(4px);
+            box-shadow: none !important;
+        }
+        .map-bg {
+            background-image: radial-gradient(#c0e8ff 2px, transparent 2px);
+            background-size: 40px 40px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background min-h-screen pb-32">
+<header class="fixed top-0 w-full z-50 flex justify-between items-center px-6 h-16 bg-[#4CB9E7] dark:bg-sky-900 docked full-width rounded-b-3xl border-b-4 border-sky-600 shadow-[0_4px_0_0_rgba(0,0,0,0.2)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-white shadow-sm">
+<img alt="Kid Buddy Avatar" class="w-full h-full object-cover" data-alt="cute friendly 3D cartoon character avatar with a smiling face and big bright eyes for a children's app" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFVab7yBrKIty_VsvdDaGPTespyt93KAH676LNq3EiIeQPI-WydcY418H7FHYsyp4mJ3847V-QCyzI7j5CrQBa11gQKcYOaujL6i3FrqiaxtIVwo95i69VGcAXnvyyJ1WL0Ua-26JCNHLbjnVajZmVuZFB8o2Zn1N3pIjBFCZtSqDHKXrHN5A-J_mPe7cglpisxwRH-BHw76dpKPvKADsDoJA-YcROBmhqLoNwYmUZiTW9l3wIQUXd-5vrY_lV3uYlfWAChA0SjT6q"/>
+</div>
+<h1 class="font-lexend font-black text-white tracking-wide text-2xl">Macera Haritası</h1>
+</div>
+<div class="flex items-center gap-2 bg-yellow-400 px-4 py-1.5 rounded-full border-b-4 border-yellow-600 shadow-sm active:translate-y-1 transition-all">
+<span class="material-symbols-outlined text-white" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-headline-md text-white">125</span>
+</div>
+</header>
+<main class="pt-24 px-container-margin map-bg min-h-screen relative overflow-hidden">
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<svg fill="none" height="100%" viewbox="0 0 400 800" width="100%" xmlns="http://www.w3.org/2000/svg">
+<path d="M100 150 Q 200 200 150 350 T 250 550 T 100 750" stroke="#4CB9E7" stroke-dasharray="20 30" stroke-linecap="round" stroke-width="12"></path>
+</svg>
+</div>
+<div class="relative z-10 space-y-element-gap-lg">
+<div class="flex flex-col items-start max-w-sm mx-auto mb-12 relative">
+<div class="bg-white p-4 rounded-xl border-2 border-primary-container shadow-[6px_6px_0_0_#4cb9e7] relative">
+<p class="font-label-bold text-primary italic">Merhaba Kaşif! Bugün hangi adaya yolculuk yapmak istersin?</p>
+<div class="absolute -bottom-2 left-8 w-4 h-4 bg-white border-b-2 border-r-2 border-primary-container rotate-45"></div>
+</div>
+<div class="mt-4 ml-2">
+<img alt="Buddy Character" class="w-20 h-20" data-alt="full body friendly 3D cartoon bear character wearing a small scout hat and a backpack, waving hello" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcscVLX5Ae4YngOFglTIQWwoOYRZTcVXcLIiWAJFNRvvkdSIcJ69_nEsgjncuLEtJXGpifkSrNDcoHdUq_P69-XlZGGsyFzn2anUe5qCIWcZivqFMQF5ENXx5tXMD4_VXM3_JJXHhw2wbRItWQeu4n3cpblS_hknCeoOvGwPC82kTnHH63Zpz6IAjYSqZNn2HiadrYfQlye6f6Uln3AAyd764CZRsHujr2R1L0OycNmcicEU4KJP0Nm8UuRMM3lkDubmXef7uKeubm"/>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-element-gap-lg max-w-4xl mx-auto">
+<button class="island-card relative group">
+<div class="bg-white rounded-lg p-6 border-2 border-primary-container shadow-[0_8px_0_0_#4cb9e7] hover:shadow-[0_4px_0_0_#4cb9e7] hover:translate-y-1 transition-all duration-200 overflow-hidden text-left w-full h-48 flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-32 h-full bg-primary-container/10 -mr-8 -rotate-12 transform group-hover:bg-primary-container/20 transition-colors"></div>
+<div class="relative z-10">
+<span class="bg-primary-container text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-2 inline-block">Sözel Bölge</span>
+<h2 class="font-headline-lg text-primary leading-tight">Türkçe Macera Adası</h2>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<span class="material-symbols-outlined text-primary-container text-5xl">auto_stories</span>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-black flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">bolt</span>
+                                %45 TAMAMLANDI
+                            </div>
+</div>
+</div>
+</button>
+<button class="island-card relative group">
+<div class="bg-white rounded-lg p-6 border-2 border-secondary-container shadow-[0_8px_0_0_#fdd73b] hover:shadow-[0_4px_0_0_#fdd73b] hover:translate-y-1 transition-all duration-200 overflow-hidden text-left w-full h-48 flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-32 h-full bg-secondary-container/10 -mr-8 -rotate-12 transform group-hover:bg-secondary-container/20 transition-colors"></div>
+<div class="relative z-10">
+<span class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-2 inline-block">Sayılar Diyarı</span>
+<h2 class="font-headline-lg text-on-secondary-container leading-tight">Matematik Krallığı</h2>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<span class="material-symbols-outlined text-secondary-container text-5xl">calculate</span>
+<div class="bg-secondary-fixed-dim text-on-secondary-fixed px-3 py-1 rounded-full text-xs font-black flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+                                32 YILDIZ
+                            </div>
+</div>
+</div>
+</button>
+<button class="island-card relative group">
+<div class="bg-white rounded-lg p-6 border-2 border-tertiary-container shadow-[0_8px_0_0_#36c487] hover:shadow-[0_4px_0_0_#36c487] hover:translate-y-1 transition-all duration-200 overflow-hidden text-left w-full h-48 flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-32 h-full bg-tertiary-container/10 -mr-8 -rotate-12 transform group-hover:bg-tertiary-container/20 transition-colors"></div>
+<div class="relative z-10">
+<span class="bg-tertiary-container text-on-tertiary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-2 inline-block">Doğa Keşfi</span>
+<h2 class="font-headline-lg text-on-tertiary-container leading-tight">Hayat Bilgisi Ormanı</h2>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<span class="material-symbols-outlined text-tertiary-container text-5xl">forest</span>
+<div class="bg-tertiary-fixed text-on-tertiary-fixed px-3 py-1 rounded-full text-xs font-black flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+                                YENİ GÖREV
+                            </div>
+</div>
+</div>
+</button>
+<button class="island-card relative group">
+<div class="bg-white rounded-lg p-6 border-2 border-primary shadow-[0_8px_0_0_#006686] hover:shadow-[0_4px_0_0_#006686] hover:translate-y-1 transition-all duration-200 overflow-hidden text-left w-full h-48 flex flex-col justify-between">
+<div class="absolute top-0 right-0 w-32 h-full bg-primary/10 -mr-8 -rotate-12 transform group-hover:bg-primary/20 transition-colors"></div>
+<div class="relative z-10">
+<span class="bg-primary text-white px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest mb-2 inline-block">Yeni Dil</span>
+<h2 class="font-headline-lg text-primary leading-tight">İngilizce Gökyüzü</h2>
+</div>
+<div class="relative z-10 flex justify-between items-end">
+<span class="material-symbols-outlined text-primary text-5xl">rocket_launch</span>
+<div class="bg-primary-fixed text-on-primary-fixed px-3 py-1 rounded-full text-xs font-black flex items-center gap-1 shadow-sm">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 0;">lock</span>
+                                KİLİTLİ
+                            </div>
+</div>
+</div>
+</button>
+</div>
+<div class="max-w-4xl mx-auto mt-12 mb-8">
+<div class="bg-surface-container-high rounded-xl p-6 border-2 border-outline-variant flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h3 class="font-headline-md text-primary">Günlük İlerlemen</h3>
+<span class="font-label-bold text-tertiary">3 / 5 Ders</span>
+</div>
+<div class="w-full bg-white h-8 rounded-full border-2 border-outline-variant overflow-hidden relative shadow-inner">
+<div class="bg-tertiary-container h-full w-3/5 rounded-r-full flex items-center justify-end px-2">
+<span class="material-symbols-outlined text-white text-xl" style="font-variation-settings: 'FILL' 1;">stars</span>
+</div>
+</div>
+<p class="text-on-surface-variant font-body-md text-center italic">Harika gidiyorsun! Bitirmene sadece 2 ders kaldı. 🚀</p>
+</div>
+</div>
+</div>
+</main>
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white dark:bg-slate-900 rounded-t-[40px] border-t-4 border-slate-100 dark:border-slate-800 shadow-[0_-4px_10px_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center justify-center bg-yellow-400 text-white rounded-3xl px-6 py-2 shadow-[0_4px_0_0_#ca8a04] -translate-y-2 active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="map" style="font-variation-settings: 'FILL' 1;">map</span>
+<span class="font-lexend font-extrabold text-xs uppercase tracking-wider">Harita</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 p-2 hover:text-[#4CB9E7] transition-colors active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="sports_esports">sports_esports</span>
+<span class="font-lexend font-extrabold text-xs uppercase tracking-wider">Oyunlar</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 p-2 hover:text-[#4CB9E7] transition-colors active:scale-90 transition-all duration-150">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-lexend font-extrabold text-xs uppercase tracking-wider">Profil</span>
+</button>
+</nav>
+</body></html>

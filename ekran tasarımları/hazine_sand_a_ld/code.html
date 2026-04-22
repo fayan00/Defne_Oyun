@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#705d00",
+                    "outline": "#6e797f",
+                    "on-surface": "#191c1d",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#006686",
+                    "primary": "#006686",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary": "#ffffff",
+                    "surface-dim": "#d9dadb",
+                    "secondary-fixed-dim": "#e8c426",
+                    "on-tertiary": "#ffffff",
+                    "primary-fixed-dim": "#70d2ff",
+                    "surface-container-lowest": "#ffffff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "tertiary-container": "#36c487",
+                    "on-primary-fixed-variant": "#004d66",
+                    "surface": "#f8f9fa",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-bright": "#f8f9fa",
+                    "on-tertiary-container": "#004b2f",
+                    "primary-fixed": "#c0e8ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-secondary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "outline-variant": "#bdc8cf",
+                    "background": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "on-primary-container": "#00475e",
+                    "on-tertiary-fixed": "#002112",
+                    "surface-container": "#edeeef",
+                    "on-error-container": "#93000a",
+                    "on-surface-variant": "#3e484e",
+                    "secondary-fixed": "#ffe173",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f4f5",
+                    "inverse-primary": "#70d2ff",
+                    "on-secondary-fixed-variant": "#554500",
+                    "inverse-surface": "#2e3132",
+                    "tertiary": "#006c46",
+                    "primary-container": "#4cb9e7",
+                    "tertiary-fixed": "#75fbb9",
+                    "on-primary-fixed": "#001e2b",
+                    "secondary-container": "#fdd73b",
+                    "on-secondary-container": "#715d00"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "container-margin": "24px",
+                    "element-gap-lg": "32px",
+                    "element-gap-sm": "8px",
+                    "element-gap-md": "16px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "label-bold": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "body-md": ["Lexend"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .confetti-particle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 2px;
+        }
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+        .star-glow {
+            filter: drop-shadow(0 0 15px rgba(253, 215, 59, 0.8));
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-primary-container font-body-md text-on-background min-h-screen overflow-hidden">
+<!-- Top Navigation Shell -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-sky-400 dark:bg-sky-600 rounded-b-[32px] border-b-4 border-sky-500 dark:border-sky-700 shadow-[0_6px_0_0_rgba(0,0,0,0.1)]">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-white">
+<img alt="Defne" data-alt="A friendly, smiling cartoon girl character with an explorer hat, large curious eyes, and a cheerful expression for children" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4evA8JcflCCDc2aO-Y8c7OenRf7-NzHRKNXfTV4vjTj7CVquP97kYNaTC3KoeVw2zHeufh1dnV6Gmyh0tw4nVfG7RMlg1OO2Ha-BE2lkQNRSPw24Ef-X0AurTOJ65o87Gd7Es2bEGc-A5OC0Ygdy47B_35aLCBOZ_cEdFQNO0yduFK7ZSpkf8RYUiOFyGoGq6AnR_SB0IBeImrPoKIpNe9xQT3rSk1bpSEbtZqgFlUpcU2dgoq2LxZUHRc-I5Ca2W6JDGjcf7z0xn"/>
+</div>
+<span class="font-headline-md text-white drop-shadow-[0_2px_0_rgba(0,0,0,0.2)]">Kâşif Defne</span>
+</div>
+<div class="flex items-center gap-2 bg-sky-500 px-4 py-2 rounded-full border-2 border-white/30 text-white font-label-bold">
+<span class="material-symbols-outlined" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span>1,250</span>
+</div>
+</header>
+<!-- Main Content Canvas: Celebration Screen -->
+<main class="relative pt-24 pb-32 min-h-screen flex flex-col items-center justify-center px-container-margin overflow-hidden">
+<!-- Background Celebration Elements (Decorative) -->
+<div class="absolute inset-0 pointer-events-none opacity-50">
+<div class="confetti-particle bg-yellow-400 rotate-12 top-[20%] left-[10%]"></div>
+<div class="confetti-particle bg-pink-400 -rotate-45 top-[15%] left-[80%]"></div>
+<div class="confetti-particle bg-emerald-400 top-[40%] left-[5%]"></div>
+<div class="confetti-particle bg-sky-400 top-[35%] left-[90%]"></div>
+<div class="confetti-particle bg-orange-400 rotate-12 top-[70%] left-[15%]"></div>
+<div class="confetti-particle bg-purple-400 top-[65%] left-[85%]"></div>
+</div>
+<!-- Character & Greeting -->
+<div class="flex flex-col items-center mb-element-gap-lg z-10">
+<div class="w-32 h-32 mb-element-gap-md animate-float">
+<img alt="Defne Celebrating" data-alt="Cheerful young explorer girl character with pigtails jumping for joy with confetti around her, expressive happy face, cartoon style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOiHd74lRvw-6krGw3C95dIKLwFBlJEHYFD7icsW5v7MCp0KC8iis-9-lqbEqoKYUqI6JGdMpEiVOHfccT82CQugyqiMT7a-eKjHfW3Fu1V9V7ZC0bY4rX4S8Dn5UIjXaewm9O1bDpfXu2M6lH_U3_Oiojq3Mc-6xAS9QyLt79WQcUR01TtYe2IJ9TeGSs7lu_tTBhGuUtQAHqdfMxm6KjMptCJhY1KaZWO5-oiD5kcrwU1oF7jugXsUnKbMCiKcSbn4HbloZlldwq"/>
+</div>
+<h1 class="font-headline-xl text-white drop-shadow-[0_4px_0_rgba(0,0,0,0.2)] text-center">Harika İş Defne!</h1>
+<p class="font-body-lg text-white font-bold opacity-90">Bütün görevleri tamamladın!</p>
+</div>
+<!-- The Treasure Chest -->
+<div class="relative w-full max-w-md flex flex-col items-center justify-center mb-element-gap-lg z-20">
+<!-- Ray of Light Effect -->
+<div class="absolute w-64 h-64 bg-yellow-300/40 rounded-full blur-3xl -z-10 animate-pulse"></div>
+<div class="relative transform hover:scale-110 transition-transform duration-300">
+<img alt="Treasure Chest" data-alt="An open skeuomorphic wooden treasure chest with golden trim, glowing from inside with bright yellow light and magical particles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjzrprPn0LI-K67mKS4wPvvDT6djayQP7k9XPjDqDEmlagB6Xc8r3eSgGVNE0SDg23C7PzDpm59C_Zk4fF5EQ_QU0Kw3Hbty_NpQ4RaYOdOMAg9tnXR2EJpEPyQMpJ-Cryo66ieBHk0kAoNIxj3F7vKP4upGoplO_G798PW5odUlaKFqHz5nHbEuxykVhaVBg7IFOkvzR0yYYk4uP1rfi_waXf-etOQzNhcMm2Vooxh7q-6NwrS5-Drdmppd87b0HidVxwKiQ0bMEL"/>
+<!-- Floating Rewards -->
+<div class="absolute -top-16 left-1/2 -translate-x-1/2 flex flex-col items-center animate-float">
+<div class="bg-white px-6 py-3 rounded-xl border-4 border-yellow-400 shadow-[0_8px_0_0_#ca8a04] flex items-center gap-3">
+<span class="material-symbols-outlined text-yellow-400 text-4xl star-glow" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-headline-md text-secondary">50 Yıldız Kazandın!</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex flex-col sm:flex-row gap-element-gap-md w-full max-w-lg z-30">
+<button class="flex-1 bg-secondary-container text-on-secondary-container font-label-bold py-5 px-8 rounded-lg border-b-[6px] border-on-secondary-container/30 active:border-b-0 active:translate-y-1 transition-all flex items-center justify-center gap-3 shadow-lg"><span class="material-symbols-outlined" data-icon="checkroom">checkroom</span>
+                Gardıroba Git</button>
+<button class="flex-1 bg-white text-primary font-label-bold py-5 px-8 rounded-lg border-b-[6px] border-primary/20 active:border-b-0 active:translate-y-1 transition-all flex items-center justify-center gap-3 shadow-lg"><span class="material-symbols-outlined" data-icon="map">map</span>
+                Haritaya Dön</button>
+</div>
+</main>
+<!-- Bottom Navigation Shell -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-4 h-24 bg-white dark:bg-slate-900 rounded-t-[32px] border-t-4 border-slate-100 dark:border-slate-800 shadow-[0_-8px_20px_rgba(0,0,0,0.05)]">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-sky-50 dark:hover:bg-slate-800 rounded-2xl transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="map">map</span>
+<span class="font-['Lexend'] font-medium text-[12px]">Harita</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-sky-50 dark:hover:bg-slate-800 rounded-2xl transition-all" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="menu_book">menu_book</span>
+<span class="font-['Lexend'] font-medium text-[12px]">Dersler</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-yellow-400 text-slate-900 rounded-2xl px-6 py-2 shadow-[0_4px_0_0_#ca8a04] -translate-y-2 active:translate-y-0 active:shadow-none transition-all duration-200" href="#">
+<span class="material-symbols-outlined text-2xl" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-['Lexend'] font-medium text-[12px]">Hazine</span>
+</a>
+</nav>
+</body></html>

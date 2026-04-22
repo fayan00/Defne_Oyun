@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#70d2ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#70d2ff",
+                    "outline": "#6e797f",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "secondary-fixed": "#ffe173",
+                    "on-tertiary-fixed": "#002112",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#e8c426",
+                    "surface-tint": "#006686",
+                    "surface": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#006686",
+                    "on-background": "#191c1d",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed": "#221b00",
+                    "surface-dim": "#d9dadb",
+                    "on-surface-variant": "#3e484e",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-primary-fixed": "#001e2b",
+                    "secondary-container": "#fdd73b",
+                    "inverse-surface": "#2e3132",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#554500",
+                    "tertiary": "#006c46",
+                    "error": "#ba1a1a",
+                    "secondary": "#705d00",
+                    "on-tertiary-container": "#004b2f",
+                    "tertiary-fixed": "#75fbb9",
+                    "on-primary-container": "#00475e",
+                    "primary-container": "#4cb9e7",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#004d66",
+                    "primary-fixed": "#c0e8ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "outline-variant": "#bdc8cf",
+                    "surface-bright": "#f8f9fa",
+                    "tertiary-container": "#36c487",
+                    "on-secondary-container": "#715d00",
+                    "surface-container-highest": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "element-gap-lg": "32px",
+                    "element-gap-md": "16px",
+                    "element-gap-sm": "8px",
+                    "container-margin": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "headline-xl": ["Lexend"]
+            },
+            "fontSize": {
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-[#e0f7fa] font-body-md text-on-background min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#4CB9E7] dark:bg-sky-900 rounded-b-[32px] border-b-4 border-sky-600/30 shadow-[0_6px_0_0_#3182ce]">
+<div class="flex items-center gap-4">
+<button class="bg-white/20 p-2 rounded-full hover:scale-105 transition-transform active:translate-y-1 active:shadow-none">
+<span class="material-symbols-outlined text-white text-3xl">arrow_back</span>
+</button>
+<h1 class="font-lexend font-bold tracking-wide text-white text-2xl drop-shadow-md">Matematik Adası</h1>
+</div>
+<div class="flex items-center gap-2 bg-yellow-400 px-4 py-1.5 rounded-full border-b-4 border-yellow-600 shadow-sm active:translate-y-1 transition-all">
+<span class="text-white font-black text-xl">⭐ 125</span>
+</div>
+</header>
+<!-- Main Map Canvas -->
+<main class="pt-32 pb-32 px-container-margin min-h-screen relative overflow-hidden">
+<!-- Decorative Background Map Elements -->
+<div class="absolute inset-0 z-0 opacity-20 pointer-events-none">
+<div class="absolute top-40 left-10 w-32 h-32 bg-tertiary-container rounded-full blur-3xl"></div>
+<div class="absolute bottom-60 right-10 w-48 h-48 bg-primary-container rounded-full blur-3xl"></div>
+</div>
+<!-- The Adventure Path (SVG Path Simulation) -->
+<div class="relative max-w-lg mx-auto z-10">
+<!-- Game Section 1: Ritmik Saymalar -->
+<div class="flex flex-col items-center mb-element-gap-lg">
+<div class="relative group">
+<div class="absolute -top-4 -right-4 bg-white px-3 py-1 rounded-full border-2 border-primary shadow-md z-20 flex gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-slate-300 text-lg">star</span>
+</div>
+<button class="w-32 h-32 bg-primary-container rounded-xl border-b-8 border-primary flex items-center justify-center shadow-lg hover:scale-105 active:translate-y-2 active:border-b-0 transition-all">
+<span class="material-symbols-outlined text-white text-6xl">counter_2</span>
+</button>
+</div>
+<h3 class="font-headline-md text-primary mt-4 bg-white/80 px-4 py-1 rounded-full border-2 border-primary-fixed-dim">Ritmik Saymalar</h3>
+</div>
+<!-- Path Line -->
+<div class="w-2 h-16 bg-dashed border-l-4 border-dashed border-sky-400 mx-auto opacity-50"></div>
+<!-- Game Section 2: Toplama & Çıkarma -->
+<div class="flex flex-col items-end mr-8 mb-element-gap-lg">
+<div class="relative group">
+<div class="absolute -top-4 -left-4 bg-white px-3 py-1 rounded-full border-2 border-secondary shadow-md z-20 flex gap-1">
+<span class="material-symbols-outlined text-yellow-400 text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-yellow-400 text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<button class="w-32 h-32 bg-secondary-container rounded-xl border-b-8 border-secondary flex items-center justify-center shadow-lg hover:scale-105 active:translate-y-2 active:border-b-0 transition-all">
+<span class="material-symbols-outlined text-on-secondary-container text-6xl">add_notes</span>
+</button>
+</div>
+<h3 class="font-headline-md text-secondary mt-4 bg-white/80 px-4 py-1 rounded-full border-2 border-secondary-fixed-dim">Toplama &amp; Çıkarma</h3>
+</div>
+<!-- Path Line Curve -->
+<div class="w-full h-16 relative">
+<svg class="absolute inset-0 w-full h-full" preserveaspectratio="none" viewbox="0 0 100 100">
+<path d="M 80 0 Q 80 100 20 100" fill="none" opacity="0.4" stroke="#4CB9E7" stroke-dasharray="10 10" stroke-width="4"></path>
+</svg>
+</div>
+<!-- Game Section 3: Paralarımız (Locked State) -->
+<div class="flex flex-col items-start ml-8 mb-element-gap-lg">
+<div class="relative">
+<!-- Overlay for Locked State -->
+<div class="absolute inset-0 bg-slate-400/30 backdrop-blur-[1px] rounded-xl z-10 flex items-center justify-center">
+<span class="material-symbols-outlined text-slate-700 text-4xl bg-white/80 p-2 rounded-full shadow-lg">lock</span>
+</div>
+<button class="w-32 h-32 bg-tertiary-container rounded-xl border-b-8 border-tertiary flex items-center justify-center shadow-lg grayscale-[0.5]">
+<span class="material-symbols-outlined text-white text-6xl">payments</span>
+</button>
+</div>
+<h3 class="font-headline-md text-tertiary mt-4 bg-white/80 px-4 py-1 rounded-full border-2 border-tertiary-fixed-dim opacity-70">Paralarımız</h3>
+</div>
+<!-- Path Line -->
+<div class="w-2 h-16 bg-dashed border-l-4 border-dashed border-sky-400 mx-auto opacity-50"></div>
+<!-- Bonus Section: Eğlenceli Geometri -->
+<div class="flex flex-col items-center mb-element-gap-lg">
+<div class="relative group">
+<button class="w-32 h-32 bg-primary-fixed-dim rounded-xl border-b-8 border-primary flex items-center justify-center shadow-lg hover:scale-105 active:translate-y-2 active:border-b-0 transition-all grayscale">
+<span class="material-symbols-outlined text-primary text-6xl">category</span>
+</button>
+<!-- Locked Badge -->
+<div class="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-error text-white text-xs font-black px-4 py-1 rounded-full shadow-lg whitespace-nowrap">
+                        150 ⭐ GEREKLİ
+                    </div>
+</div>
+<h3 class="font-headline-md text-primary-fixed mt-8 bg-white/80 px-4 py-1 rounded-full border-2 border-primary-fixed-dim opacity-50">Geometri</h3>
+</div>
+</div>
+<!-- Floating Buddy -->
+<div class="fixed bottom-32 right-6 z-40">
+<div class="bg-white p-4 rounded-lg shadow-[8px_8px_0px_0px_rgba(0,0,0,0.1)] border-2 border-sky-100 flex flex-col items-center gap-2">
+<div class="w-16 h-16 bg-yellow-200 rounded-full flex items-center justify-center border-4 border-yellow-400">
+<span class="material-symbols-outlined text-yellow-600 text-4xl">emoji_objects</span>
+</div>
+<p class="font-label-bold text-sky-900 text-center">Hadi<br/>Başlayalım!</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-4 bg-white dark:bg-slate-900 rounded-t-[40px] border-t-4 border-sky-100 dark:border-sky-800 shadow-[0_-8px_20px_rgba(0,0,0,0.05)]">
+<a class="text-slate-400 dark:text-slate-500 flex flex-col items-center gap-1 hover:text-sky-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">map</span>
+<span class="font-lexend font-extrabold text-xs uppercase">Map</span>
+</a>
+<a class="bg-yellow-400 dark:bg-yellow-500 text-sky-900 rounded-2xl px-6 py-2 shadow-[0_4px_0_0_#ca8a04] scale-110 flex flex-col items-center gap-1 transition-all" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">videogame_asset</span>
+<span class="font-lexend font-extrabold text-xs uppercase text-yellow-900">Games</span>
+</a>
+<a class="text-slate-400 dark:text-slate-500 flex flex-col items-center gap-1 hover:text-sky-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-lexend font-extrabold text-xs uppercase">Profile</span>
+</a>
+</nav>
+<!-- Map Background Decorations -->
+<div class="fixed top-24 left-4 z-0 pointer-events-none opacity-40">
+<img alt="cloud decoration" data-alt="soft white cartoon cloud with friendly rounded edges and subtle shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzEe9GxVl8G4ind1yEE8-bYljenVstmnFifIGJiK0qz3DOpVLBenmb7jz8Bw1LEmVViEzCznYttauzsHUDyHRfrJXpPjWj9AYMbbIsRkyrVenyMmByyItUdSVObFI38vfg7WbOlT1UIQ5CEEvWRIwtrsZxTImMsHUIpuMbz_9rahfkChcQp83n-O2deIkXGsEnKS6884afl9hNq1KSZz2AfZhY3K20PzpkZZ5mncHnskUqxDWLv8idOMF1hciFMfLAcdeTRYjqxWBx"/>
+</div>
+<div class="fixed top-64 right-10 z-0 pointer-events-none opacity-40">
+<img alt="cloud decoration" data-alt="soft white cartoon cloud with friendly rounded edges and subtle shadow" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGl4AkT7Tm5V1cjnotn4WnXEtuPHkSfTImZkU6bdBo87PI4cwg8DE_pj1Awdb0kosSyoZDrDLGKtaYsI_xV7NXEEuTRWOfAO4whKV8kH90GOUD538Ovnoum5MFO3ksjvkDBcAtEhmy5TJ6n-gN_TRBFa7ohqEErd9hyBo2j1ilSVavlzsiapq1u80iq-SGPuIeBddVpuav5pTT7bDaY_20NCVRbryGZ1GRFrxrvfs1A2_uSb4UtzcR09dJf68zhAE-zPRL_PSzirCW"/>
+</div>
+<div class="fixed bottom-40 left-12 z-0 pointer-events-none opacity-30">
+<img alt="island decoration" data-alt="vibrant green cartoon palm tree on a tiny sandy island with bright cheerful colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnFVzIg-U5_Pfv_O9rmh5nN5chGRZHW2RsG6P4nX6HgQcJTIAaiLdjSsB2V9hXaBH78g_I0tmD3E6NziXYRdKzIIUvixsl2p74aiVvvmJ9tP0lrb12GlBu9F5Ms2QWOth736HU1OVum3lPlGYytbZpJ5ly91pZPntpNmVUXwgbIBvZMXmrds3FYu4Sh6xcMQhsDgeYAi8iI2YjDWo2J4r_KlrZyN-Gb7Nza-gW3rLXK0FqAjJqRsW-w3jSX5IAoWcGdXInZV-CW1u7"/>
+</div>
+</body></html>

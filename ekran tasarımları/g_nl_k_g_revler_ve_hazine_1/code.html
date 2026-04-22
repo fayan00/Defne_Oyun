@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e1e3e4",
+                    "surface-dim": "#d9dadb",
+                    "on-tertiary": "#ffffff",
+                    "background": "#f8f9fa",
+                    "primary": "#006686",
+                    "outline-variant": "#bdc8cf",
+                    "on-surface-variant": "#3e484e",
+                    "inverse-surface": "#2e3132",
+                    "secondary-container": "#fdd73b",
+                    "on-primary-container": "#00475e",
+                    "secondary-fixed": "#ffe173",
+                    "surface-container": "#edeeef",
+                    "on-secondary": "#ffffff",
+                    "secondary": "#705d00",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#70d2ff",
+                    "primary-container": "#4cb9e7",
+                    "outline": "#6e797f",
+                    "on-primary-fixed-variant": "#004d66",
+                    "secondary-fixed-dim": "#e8c426",
+                    "tertiary-container": "#36c487",
+                    "surface-variant": "#e1e3e4",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#c0e8ff",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "on-tertiary-container": "#004b2f",
+                    "on-secondary-fixed-variant": "#554500",
+                    "surface-tint": "#006686",
+                    "error": "#ba1a1a",
+                    "on-surface": "#191c1d",
+                    "on-tertiary-fixed": "#002112",
+                    "surface-container-low": "#f3f4f5",
+                    "on-primary-fixed": "#001e2b",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#75fbb9",
+                    "surface-container-high": "#e7e8e9",
+                    "primary-fixed-dim": "#70d2ff",
+                    "surface": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "on-secondary-fixed": "#221b00",
+                    "on-primary": "#ffffff",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "surface-bright": "#f8f9fa",
+                    "on-secondary-container": "#715d00",
+                    "on-error-container": "#93000a",
+                    "tertiary": "#006c46"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "element-gap-sm": "8px",
+                    "unit": "8px",
+                    "element-gap-md": "16px",
+                    "gutter": "16px",
+                    "container-margin": "24px",
+                    "element-gap-lg": "32px"
+            },
+            "fontFamily": {
+                    "headline-xl": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "label-bold": ["Lexend"],
+                    "body-lg": ["Lexend"]
+            },
+            "fontSize": {
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .bounce-effect:active { transform: scale(0.9); transition: all 0.15s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+        .skeuo-shadow { box-shadow: 0 6px 0 0 rgba(0,0,0,0.1); }
+        .skeuo-shadow:active { transform: translateY(4px); box-shadow: 0 2px 0 0 rgba(0,0,0,0.1); }
+        .text-shadow-sm { text-shadow: 0 2px 0 rgba(0,0,0,0.1); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body-md text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-white dark:bg-slate-900 docked full-width top-0 rounded-b-[32px] border-b-4 border-sky-100 dark:border-sky-800 shadow-[0_4px_0_0_#bae6fd] dark:shadow-none">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full overflow-hidden border-2 border-primary-container bg-primary-fixed">
+<img alt="Avatar" data-alt="Cute friendly cartoon 3D character of a young girl with a happy expression, bright colors, Pixar style 3D render" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBunMSvAIjoTydwzn2venIBIOwjPDqXEjCrH-5TR1BIxJRXb8cB7yeQgQQdjNwjrMdCkW5eSGjYWzvWKvd9PzMlXekxEGdWwLO3RMEb2gzenO1NSqlVpqoi-Mvk10IYzEDnKmr1yP3xZA1QB0HmyYG80kn6JMe5RwnoffXvF3JxxgZLSOkqT9DiTEqDlrff4EonwZxri--aRdxtGRBf1AVszEhd5Q-Ica2y5rmqjgSghsSCD5EZ1M07WyWyuYAxdcNNXRAQ_j49cONL"/>
+</div>
+<h1 class="font-['Lexend'] font-bold text-lg tracking-tight text-[#4CB9E7] dark:text-sky-400">Defne'nin Dünyası</h1>
+</div>
+<div class="flex items-center gap-2 bg-sky-50 dark:bg-sky-900/40 px-4 py-2 rounded-full border-2 border-sky-100">
+<span class="text-xl">⭐</span>
+<span class="font-label-bold text-primary-container">120 Yıldız</span>
+</div>
+</header>
+<main class="pt-28 px-container-margin max-w-2xl mx-auto">
+<!-- Title Section -->
+<div class="mb-gutter">
+<h2 class="font-headline-lg text-primary text-shadow-sm">Bugünkü Görevlerin</h2>
+<p class="text-on-surface-variant font-body-md">Hadi Defne, macera seni bekliyor!</p>
+</div>
+<!-- Task Cards Bento Grid -->
+<div class="grid gap-element-gap-md">
+<!-- Task 1: Matematik Canavarı -->
+<div class="bg-white dark:bg-slate-800 p-element-gap-md rounded-lg border-b-[6px] border-sky-100 dark:border-sky-900 shadow-sm flex items-center gap-gutter group hover:bg-sky-50 transition-colors">
+<div class="w-16 h-16 bg-primary-container/20 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-primary" data-icon="calculate" style="font-variation-settings: 'FILL' 1;">calculate</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-bold text-primary text-lg">Matematik Canavarı</h3>
+<p class="text-on-surface-variant text-sm mb-2">5 toplama işlemi yap</p>
+<div class="w-full h-6 bg-surface-container rounded-full overflow-hidden border-2 border-surface-container-highest">
+<div class="h-full bg-tertiary-container flex items-center justify-end px-2" style="width: 60%">
+<span class="material-symbols-outlined text-white text-sm" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-xs font-bold text-tertiary">%60 Tamamlandı</span>
+<span class="text-xs font-bold text-outline">3/5</span>
+</div>
+</div>
+<button class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center skeuo-shadow bounce-effect border-b-4 border-yellow-600">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Task 2: Kelime Avcısı -->
+<div class="bg-white dark:bg-slate-800 p-element-gap-md rounded-lg border-b-[6px] border-sky-100 dark:border-sky-900 shadow-sm flex items-center gap-gutter group hover:bg-sky-50 transition-colors">
+<div class="w-16 h-16 bg-purple-100 dark:bg-purple-900/20 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-purple-600" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-bold text-purple-600 text-lg">Kelime Avcısı</h3>
+<p class="text-on-surface-variant text-sm mb-2">10 yeni kelime keşfet</p>
+<div class="w-full h-6 bg-surface-container rounded-full overflow-hidden border-2 border-surface-container-highest">
+<div class="h-full bg-purple-400 flex items-center justify-end px-2" style="width: 20%">
+<span class="material-symbols-outlined text-white text-sm" data-icon="auto_awesome" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-xs font-bold text-purple-600">%20 Tamamlandı</span>
+<span class="text-xs font-bold text-outline">2/10</span>
+</div>
+</div>
+<button class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center skeuo-shadow bounce-effect border-b-4 border-yellow-600">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+<!-- Task 3: Doğa Dostu -->
+<div class="bg-white dark:bg-slate-800 p-element-gap-md rounded-lg border-b-[6px] border-sky-100 dark:border-sky-900 shadow-sm flex items-center gap-gutter group hover:bg-sky-50 transition-colors">
+<div class="w-16 h-16 bg-green-100 dark:bg-green-900/20 rounded-xl flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-4xl text-green-600" data-icon="recycling" style="font-variation-settings: 'FILL' 1;">recycling</span>
+</div>
+<div class="flex-grow">
+<h3 class="font-label-bold text-green-600 text-lg">Doğa Dostu</h3>
+<p class="text-on-surface-variant text-sm mb-2">1 geri dönüşüm görevi tamamla</p>
+<div class="w-full h-6 bg-surface-container rounded-full overflow-hidden border-2 border-surface-container-highest">
+<div class="h-full bg-green-200" style="width: 0%"></div>
+</div>
+<div class="flex justify-between mt-1">
+<span class="text-xs font-bold text-outline">Bekliyor...</span>
+<span class="text-xs font-bold text-outline">0/1</span>
+</div>
+</div>
+<button class="w-12 h-12 bg-secondary-container text-on-secondary-container rounded-full flex items-center justify-center skeuo-shadow bounce-effect border-b-4 border-yellow-600">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+</div>
+</div>
+<!-- Mysterious Treasure Chest Section -->
+<div class="mt-element-gap-lg relative p-6 bg-gradient-to-b from-sky-400 to-primary rounded-xl overflow-hidden shadow-xl border-4 border-white/30 text-center">
+<div class="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/20 to-transparent opacity-50"></div>
+<div class="relative z-10 py-4 flex flex-col items-center">
+<div class="mb-4">
+<img alt="Hazine Sandığı" class="w-32 h-32 drop-shadow-[0_10px_10px_rgba(255,255,255,0.4)]" data-alt="A magical 3D golden treasure chest glowing with blue and white sparkles, colorful floating particles, vibrant cartoon style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbl2B-VWLzDV8oU9xAAl2wYo-mjqtPG8PlLKtmKjxWXoDZV3zINwaYAvRsjSvsHRZYnWVskmvMpFj0ykrARcZDQjks53ctRksyZ0crpbdPIX0nl7NDHdnbaAhpXF3jx_SzLp5oXQnRCga-uwGCIY_z8lsW9xsbXzKqNEQnbsM6V6VQShN4OmmSTdsT2q66gjQgpYijAOwVcqsbT9ZebhFgiJxX_CQ77mbsmtp_EkCI3AKoKd5xeZrxoUOFutURG91btPT0jwAqe73L"/>
+</div>
+<h3 class="text-white font-headline-md uppercase tracking-widest text-shadow-sm">GİZEMLİ HAZİNE SANDIĞI</h3>
+<p class="text-sky-100 font-label-bold mt-2 bg-black/20 px-4 py-1 rounded-full inline-block">Tüm görevleri bitir ve aç!</p>
+<!-- Unlock Progress Visual -->
+<div class="flex gap-2 mt-6">
+<div class="w-8 h-8 rounded-full bg-tertiary-container flex items-center justify-center border-2 border-white shadow-lg">
+<span class="material-symbols-outlined text-white text-sm" data-icon="check" style="font-variation-settings: 'wght' 700;">check</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center border-2 border-white/50">
+<span class="text-white/50 text-xs font-bold">2</span>
+</div>
+<div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center border-2 border-white/50">
+<span class="text-white/50 text-xs font-bold">3</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 docked full-width bottom-0 rounded-t-[32px] border-t-4 border-sky-100 dark:border-sky-800 shadow-[0_-4px_0_0_#bae6fd] dark:shadow-none">
+<!-- Tasks (Active) -->
+<button class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/50 text-sky-600 dark:text-sky-200 rounded-full px-6 py-2 shadow-[inset_0_2px_4px_rgba(0,0,0,0.1)] transition-all duration-150 bounce-effect">
+<span class="material-symbols-outlined" data-icon="task_alt" style="font-variation-settings: 'FILL' 1;">task_alt</span>
+<span class="font-['Lexend'] font-medium text-xs">Görevler</span>
+</button>
+<!-- Treasure -->
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-sky-50 dark:hover:bg-sky-900/30 transition-all duration-150 bounce-effect">
+<span class="material-symbols-outlined" data-icon="redeem">redeem</span>
+<span class="font-['Lexend'] font-medium text-xs">Hazine</span>
+</button>
+<!-- Profile -->
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-6 py-2 hover:bg-sky-50 dark:hover:bg-sky-900/30 transition-all duration-150 bounce-effect">
+<span class="material-symbols-outlined" data-icon="face_5">face_5</span>
+<span class="font-['Lexend'] font-medium text-xs">Profil</span>
+</button>
+</nav>
+</body></html>

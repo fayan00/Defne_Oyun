@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-tint": "#006686",
+                        "primary-fixed-dim": "#70d2ff",
+                        "on-secondary-fixed": "#221b00",
+                        "on-tertiary-fixed": "#002112",
+                        "surface": "#f8f9fa",
+                        "secondary-container": "#fdd73b",
+                        "secondary-fixed": "#ffe173",
+                        "on-background": "#191c1d",
+                        "on-primary-fixed-variant": "#004d66",
+                        "surface-variant": "#e1e3e4",
+                        "tertiary-fixed-dim": "#56de9f",
+                        "inverse-surface": "#2e3132",
+                        "inverse-on-surface": "#f0f1f2",
+                        "inverse-primary": "#70d2ff",
+                        "error-container": "#ffdad6",
+                        "secondary": "#705d00",
+                        "background": "#f8f9fa",
+                        "surface-dim": "#d9dadb",
+                        "surface-container": "#edeeef",
+                        "secondary-fixed-dim": "#e8c426",
+                        "on-tertiary-fixed-variant": "#005234",
+                        "on-tertiary": "#ffffff",
+                        "on-primary": "#ffffff",
+                        "primary-fixed": "#c0e8ff",
+                        "tertiary-container": "#36c487",
+                        "surface-container-lowest": "#ffffff",
+                        "primary-container": "#4cb9e7",
+                        "outline-variant": "#bdc8cf",
+                        "surface-container-highest": "#e1e3e4",
+                        "on-primary-fixed": "#001e2b",
+                        "outline": "#6e797f",
+                        "on-surface-variant": "#3e484e",
+                        "on-primary-container": "#00475e",
+                        "tertiary-fixed": "#75fbb9",
+                        "surface-container-low": "#f3f4f5",
+                        "on-error-container": "#93000a",
+                        "surface-container-high": "#e7e8e9",
+                        "on-surface": "#191c1d",
+                        "primary": "#006686",
+                        "on-error": "#ffffff",
+                        "surface-bright": "#f8f9fa",
+                        "on-secondary": "#ffffff",
+                        "on-tertiary-container": "#004b2f",
+                        "on-secondary-container": "#715d00",
+                        "tertiary": "#006c46",
+                        "on-secondary-fixed-variant": "#554500",
+                        "error": "#ba1a1a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "16px",
+                        "container-margin": "24px",
+                        "element-gap-lg": "32px",
+                        "element-gap-md": "16px",
+                        "unit": "8px",
+                        "element-gap-sm": "8px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Lexend"],
+                        "headline-md": ["Lexend"],
+                        "body-lg": ["Lexend"],
+                        "headline-lg": ["Lexend"],
+                        "label-bold": ["Lexend"],
+                        "headline-xl": ["Lexend"],
+                        "lexend": ["Lexend"]
+                    },
+                    "fontSize": {
+                        "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                        "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                        "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                        "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 48;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md min-h-screen pb-32">
+<!-- TopAppBar Shell -->
+<header class="bg-[#4CB9E7] dark:bg-sky-900 text-white dark:text-sky-100 font-lexend font-bold tracking-wide docked full-width top-0 rounded-b-[32px] border-b-4 border-sky-600/30 shadow-[0_6px_0_0_#0284c7] flex justify-between items-center w-full px-6 h-20 fixed z-50">
+<div class="flex items-center gap-3">
+<div class="w-12 h-12 rounded-full border-2 border-white overflow-hidden bg-white">
+<img alt="Explorer Avatar" data-alt="A cute cartoon 3D girl explorer character with a yellow hat, big friendly eyes, and a cheerful smile on a sky blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0NK-VJ9h7SIc8fgp93-r8SwNCH77DaClE94LVRtnlIOGxF36EgxrevL5e2jZY4XEgi0VSZwQbaT_rNPTrVlGJLHPle-xEdjp7OJIGi_hVR7ZIKrhsnm9qnQxd9EWwHQOkWyQeko_I_OopeNZ4puPwVTC45tYStcLOLjg2imEWKMsjfHahA3UsyKT54Vj2fJXvii2Z8dXnoMhSrrQctGqhTbK7WEuDntrsWsWT_FqmWvXzMYG2dDBQCNbwhs_wacCBZbunh-s3Vtwk"/>
+</div>
+<span class="text-2xl font-black text-white italic">Defne'nin Yolculuğu</span>
+</div>
+<button class="hover:scale-105 transition-transform active:translate-y-1 active:shadow-none duration-100">
+<span class="material-symbols-outlined text-3xl" data-icon="settings">settings</span>
+</button>
+</header>
+<main class="pt-28 px-container-margin space-y-element-gap-lg">
+<!-- Hero Profile Section -->
+<section class="relative bg-primary-container p-6 rounded-xl border-4 border-[#0284c7]/20 shadow-[0_8px_0_0_#0284c7]">
+<div class="flex flex-col md:flex-row items-center gap-6">
+<div class="relative">
+<div class="w-32 h-32 rounded-full border-8 border-secondary-fixed bg-white flex items-center justify-center shadow-lg">
+<img alt="Defne Avatar" class="w-24 h-24" data-alt="Cartoon girl explorer avatar with a yellow hat and a small green backpack, friendly anime-inspired 3D style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQfKzyHv-xbAcj_kzplapFvdzE20aW_WA6cZuQQyV4O_HNXAklaoXud_ZAdXpAZCBzbE97LyGjNB4SO2lG5cJr4PTseoBPzuJMqff2-E6nbDlMiKjl4v0hBeRbdhhck-dFPcnO5F-F2BZrALqMbFNRhM3I5cgddKyybxmS1AxAqSdvAycgRUd3dDGfrgmLvAQwe71zckDyrD69kfFkv7jBaWkAVTOAKeD6ISX4npG-6z6szZ4KBBQjIy5orQj7aDqaA-WyixUjfSEf"/>
+</div>
+<div class="absolute -bottom-2 -right-2 bg-secondary-container text-on-secondary-container px-4 py-1 rounded-full font-black text-sm border-2 border-on-secondary-container/20">
+                        Level 5
+                    </div>
+</div>
+<div class="text-center md:text-left">
+<h1 class="font-headline-xl text-white drop-shadow-md">Merhaba, Defne!</h1>
+<p class="font-body-lg text-sky-50 font-medium">Bugünkü maceralara hazır mısın?</p>
+</div>
+<div class="md:ml-auto grid grid-cols-2 gap-4 w-full md:w-auto">
+<div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg flex flex-col items-center">
+<span class="material-symbols-outlined text-secondary-fixed text-4xl filled-icon" data-icon="stars" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-headline-md text-white">1,240</span>
+<span class="font-label-bold text-sky-100 uppercase text-[10px]">TOPLANAN YILDIZLAR</span>
+</div>
+<div class="bg-white/20 backdrop-blur-sm p-4 rounded-lg flex flex-col items-center">
+<span class="material-symbols-outlined text-tertiary-fixed text-4xl filled-icon" data-icon="workspace_premium" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+<span class="font-headline-md text-white">12</span>
+<span class="font-label-bold text-sky-100 uppercase text-[10px]">ROZETLER</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Tracker Section -->
+<section class="space-y-element-gap-md">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="analytics">analytics</span>
+<h2 class="font-headline-md text-primary">İlerlemem (My Progress)</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<!-- Turkish -->
+<div class="bg-white p-6 rounded-lg border-2 border-primary-fixed-dim shadow-[0_4px_0_0_#bdc8cf]">
+<div class="flex justify-between mb-2">
+<span class="font-label-bold">Turkish</span>
+<span class="font-label-bold text-primary">85%</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-full overflow-hidden border-2 border-surface-variant">
+<div class="h-full bg-tertiary-container rounded-full flex items-center justify-end pr-2" style="width: 85%">
+<span class="material-symbols-outlined text-white text-sm filled-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Math -->
+<div class="bg-white p-6 rounded-lg border-2 border-primary-fixed-dim shadow-[0_4px_0_0_#bdc8cf]">
+<div class="flex justify-between mb-2">
+<span class="font-label-bold">Math</span>
+<span class="font-label-bold text-primary">92%</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-full overflow-hidden border-2 border-surface-variant">
+<div class="h-full bg-tertiary-container rounded-full flex items-center justify-end pr-2" style="width: 92%">
+<span class="material-symbols-outlined text-white text-sm filled-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- Science -->
+<div class="bg-white p-6 rounded-lg border-2 border-primary-fixed-dim shadow-[0_4px_0_0_#bdc8cf]">
+<div class="flex justify-between mb-2">
+<span class="font-label-bold">Science</span>
+<span class="font-label-bold text-primary">60%</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-full overflow-hidden border-2 border-surface-variant">
+<div class="h-full bg-tertiary-container rounded-full flex items-center justify-end pr-2" style="width: 60%">
+<span class="material-symbols-outlined text-white text-sm filled-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+<!-- English -->
+<div class="bg-white p-6 rounded-lg border-2 border-primary-fixed-dim shadow-[0_4px_0_0_#bdc8cf]">
+<div class="flex justify-between mb-2">
+<span class="font-label-bold">English</span>
+<span class="font-label-bold text-primary">78%</span>
+</div>
+<div class="h-6 w-full bg-surface-container rounded-full overflow-hidden border-2 border-surface-variant">
+<div class="h-full bg-tertiary-container rounded-full flex items-center justify-end pr-2" style="width: 78%">
+<span class="material-symbols-outlined text-white text-sm filled-icon" data-icon="star" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Badges Section -->
+<section class="space-y-element-gap-md pb-12">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="military_tech">military_tech</span>
+<h2 class="font-headline-md text-secondary">Rozetlerim (My Badges)</h2>
+</div>
+<div class="flex flex-wrap gap-6 justify-center md:justify-start">
+<!-- Badge 1 -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-secondary-container shadow-[0_6px_0_0_#715d00] flex items-center justify-center transition-transform group-hover:scale-110 active:translate-y-1 active:shadow-none">
+<span class="material-symbols-outlined text-5xl text-secondary-container filled-icon" data-icon="auto_fix_high" style="font-variation-settings: 'FILL' 1;">auto_fix_high</span>
+</div>
+<span class="font-label-bold text-center text-sm w-24">Math Wizard</span>
+</div>
+<!-- Badge 2 -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-tertiary-fixed shadow-[0_6px_0_0_#005234] flex items-center justify-center transition-transform group-hover:scale-110 active:translate-y-1 active:shadow-none">
+<span class="material-symbols-outlined text-5xl text-tertiary filled-icon" data-icon="park" style="font-variation-settings: 'FILL' 1;">park</span>
+</div>
+<span class="font-label-bold text-center text-sm w-24">Forest Protector</span>
+</div>
+<!-- Badge 3 -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-primary-container shadow-[0_6px_0_0_#00475e] flex items-center justify-center transition-transform group-hover:scale-110 active:translate-y-1 active:shadow-none">
+<span class="material-symbols-outlined text-5xl text-primary filled-icon" data-icon="menu_book" style="font-variation-settings: 'FILL' 1;">menu_book</span>
+</div>
+<span class="font-label-bold text-center text-sm w-24">Speedy Reader</span>
+</div>
+<!-- Badge 4 -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-error-container shadow-[0_6px_0_0_#93000a] flex items-center justify-center transition-transform group-hover:scale-110 active:translate-y-1 active:shadow-none">
+<span class="material-symbols-outlined text-5xl text-error filled-icon" data-icon="bolt" style="font-variation-settings: 'FILL' 1;">bolt</span>
+</div>
+<span class="font-label-bold text-center text-sm w-24">Quick Solver</span>
+</div>
+<!-- Badge 5 -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer opacity-50 grayscale">
+<div class="w-24 h-24 rounded-full bg-white border-4 border-surface-dim shadow-[0_6px_0_0_#6e797f] flex items-center justify-center">
+<span class="material-symbols-outlined text-5xl text-surface-variant" data-icon="language">language</span>
+</div>
+<span class="font-label-bold text-center text-sm w-24">World Traveler</span>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Shell -->
+<nav class="bg-white dark:bg-slate-900 border-t-2 border-sky-100 dark:border-sky-800 shadow-[0_-8px_20px_rgba(0,0,0,0.05)] fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-4 h-24 rounded-t-[40px]">
+<button class="flex flex-col items-center justify-center text-sky-300 dark:text-sky-700 hover:bg-sky-50 dark:hover:bg-sky-950 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-3xl mb-1" data-icon="school">school</span>
+<span class="font-lexend text-xs font-black uppercase">ÖĞREN</span>
+</button>
+<button class="flex flex-col items-center justify-center text-sky-300 dark:text-sky-700 hover:bg-sky-50 dark:hover:bg-sky-950 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-3xl mb-1" data-icon="map">map</span>
+<span class="font-lexend text-xs font-black uppercase">HARİTA</span>
+</button>
+<button class="flex flex-col items-center justify-center text-sky-300 dark:text-sky-700 hover:bg-sky-50 dark:hover:bg-sky-950 active:scale-90 transition-all">
+<span class="material-symbols-outlined text-3xl mb-1" data-icon="backpack">backpack</span>
+<span class="font-lexend text-xs font-black uppercase">ÇANTA</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-[#4CB9E7] text-white rounded-full px-6 py-2 shadow-[0_4px_0_0_#0284c7] active:scale-90 transition-all">
+<span class="material-symbols-outlined text-3xl mb-1 filled-icon" data-icon="group" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-lexend text-xs font-black uppercase">ARKADAŞLAR</span>
+</button>
+</nav>
+</body></html>

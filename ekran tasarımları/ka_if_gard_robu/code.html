@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+<html class="light" lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-primary-fixed-variant": "#004d66",
+                    "background": "#f8f9fa",
+                    "secondary": "#705d00",
+                    "primary": "#006686",
+                    "primary-container": "#4cb9e7",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-low": "#f3f4f5",
+                    "surface": "#f8f9fa",
+                    "tertiary-fixed": "#75fbb9",
+                    "on-primary-container": "#00475e",
+                    "on-background": "#191c1d",
+                    "secondary-fixed-dim": "#e8c426",
+                    "on-primary-fixed": "#001e2b",
+                    "primary-fixed-dim": "#70d2ff",
+                    "on-surface-variant": "#3e484e",
+                    "tertiary-container": "#36c487",
+                    "on-secondary-fixed-variant": "#554500",
+                    "surface-container": "#edeeef",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "surface-bright": "#f8f9fa",
+                    "outline": "#6e797f",
+                    "on-secondary-fixed": "#221b00",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "tertiary": "#006c46",
+                    "surface-container-highest": "#e1e3e4",
+                    "on-secondary-container": "#715d00",
+                    "on-tertiary-container": "#004b2f",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#002112",
+                    "surface-tint": "#006686",
+                    "on-secondary": "#ffffff",
+                    "secondary-fixed": "#ffe173",
+                    "surface-container-high": "#e7e8e9",
+                    "inverse-primary": "#70d2ff",
+                    "surface-variant": "#e1e3e4",
+                    "on-primary": "#ffffff",
+                    "secondary-container": "#fdd73b",
+                    "inverse-on-surface": "#f0f1f2",
+                    "surface-container-lowest": "#ffffff",
+                    "primary-fixed": "#c0e8ff",
+                    "outline-variant": "#bdc8cf",
+                    "on-surface": "#191c1d",
+                    "on-error": "#ffffff",
+                    "inverse-surface": "#2e3132"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "gutter": "16px",
+                    "element-gap-lg": "32px",
+                    "container-margin": "24px",
+                    "element-gap-sm": "8px",
+                    "element-gap-md": "16px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "headline-xl": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "headline-md": ["Lexend"]
+            },
+            "fontSize": {
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .active-tab {
+            box-shadow: 0 4px 0 0 #715d00;
+        }
+        .pressable {
+            transition: all 0.1s ease;
+        }
+        .pressable:active {
+            transform: translateY(4px);
+            box-shadow: none !important;
+        }
+        .card-depth {
+            box-shadow: 0 6px 0 0 rgba(0,0,0,0.1);
+        }
+        .item-locked {
+            filter: grayscale(0.5);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background font-body-md text-on-background selection:bg-primary-container min-h-screen pb-32">
+<!-- TopAppBar -->
+<nav class="sticky top-0 z-50 bg-white dark:bg-slate-900 rounded-b-[32px] border-b-4 border-sky-100 dark:border-slate-800 shadow-[0_4px_0_0_#4CB9E720] flex justify-between items-center w-full px-6 py-4">
+<button class="pressable text-sky-600 dark:text-sky-300">
+<span class="material-symbols-outlined text-3xl">arrow_back</span>
+</button>
+<h1 class="font-lexend font-bold text-lg tracking-tight text-sky-600 dark:text-sky-300">Kaşif Gardırobu</h1>
+<button class="pressable text-sky-600 dark:text-sky-300">
+<span class="material-symbols-outlined text-3xl">home</span>
+</button>
+</nav>
+<main class="px-container-margin pt-6 space-y-element-gap-lg">
+<!-- Avatar Display Area -->
+<section class="relative flex flex-col items-center justify-center py-8 bg-sky-50 rounded-xl border-2 border-sky-200">
+<div class="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+<!-- Sparkle Effects -->
+<span class="absolute top-0 right-0 material-symbols-outlined text-secondary-fixed-dim text-4xl" data-weight="fill">star</span>
+<span class="absolute bottom-10 left-0 material-symbols-outlined text-primary-container text-2xl" data-weight="fill">auto_awesome</span>
+<img alt="Adorable cartoon girl explorer avatar wearing a yellow hat and blue backpack" class="w-full h-full object-contain drop-shadow-2xl" data-alt="adorable cartoon 3D character of a young girl explorer with a cheerful smile, wearing adventure gear, soft lighting, vibrant colors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC46u-PcJzOKJK9HsEnxHQiGx9_vOuyRSsU1gMqLundMUT2rQh20VeIICg1or8qRgWf_xzcjFr2vrNdW2ZqdSta5DjyQDMNrm9L5PXFta-Hd3hl3MRCpbDIssT7joIJMPp44rjQezRl77mo8VfL58Wo-26BVqqy3QzrbcMlU27WVCBclRnw_kuC2QalZza4Evd7qn20KQx-NLCGbohgqcK6qZG7COKpDdNrwhPsHncUtiLwgQWfKq6aWvb8bbFJno6Ac7gmYZgmtKZd"/>
+</div>
+<!-- Currency Display -->
+<div class="absolute top-4 right-4 bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full border-b-4 border-secondary font-label-bold flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined" data-weight="fill">stars</span>
+<span class="text-label-bold">120 Yıldız</span>
+</div>
+<!-- Name Tag -->
+<div class="mt-4 bg-white px-8 py-2 rounded-full border-2 border-sky-100 shadow-sm">
+<span class="font-headline-md text-primary">Kâşif Defne</span>
+</div>
+</section>
+<!-- Category Tabs -->
+<section class="flex gap-element-gap-md overflow-x-auto pb-4 no-scrollbar">
+<button class="pressable flex items-center gap-2 bg-secondary-container text-on-secondary-container px-6 py-4 rounded-lg border-b-4 border-secondary active-tab shrink-0">
+<span class="material-symbols-outlined" data-weight="fill">checkroom</span>
+<span class="font-label-bold">Kıyafetler</span>
+</button>
+<button class="pressable flex items-center gap-2 bg-white text-outline px-6 py-4 rounded-lg border-b-4 border-surface-dim shrink-0">
+<span class="material-symbols-outlined">child_hat</span>
+<span class="font-label-bold">Şapkalar</span>
+</button>
+<button class="pressable flex items-center gap-2 bg-white text-outline px-6 py-4 rounded-lg border-b-4 border-surface-dim shrink-0">
+<span class="material-symbols-outlined">backpack</span>
+<span class="font-label-bold">Aksesuarlar</span>
+</button>
+<button class="pressable flex items-center gap-2 bg-white text-outline px-6 py-4 rounded-lg border-b-4 border-surface-dim shrink-0">
+<span class="material-symbols-outlined">pets</span>
+<span class="font-label-bold">Dostlar</span>
+</button>
+</section>
+<!-- Wardrobe Grid -->
+<section class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-gutter">
+<!-- Item 1: Active -->
+<div class="pressable relative bg-white border-2 border-primary-container rounded-lg p-4 card-depth flex flex-col items-center">
+<div class="w-full aspect-square mb-2 bg-primary-fixed rounded-md flex items-center justify-center p-2">
+<img alt="Blue explorer jacket" class="w-full h-full object-contain" data-alt="cute blue cartoon explorer jacket with big pockets, soft 3D style on light blue background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZgB6Mhn1VpOcSRTyqechlVcTHrWZNYo362aewPNAj81XrpOsoAeT9JDqjF431nCIYGkkEksMUVlURVEmsge42IN7fB1mKfC1S46hvOfQyz7QypaTdXoxRhEAZd_HUBX7uzkxEiUIMZtobzSgFDtFvTE-S-HE347YiUN9n1U6bBqX4ZiXR8dFxklJvlhLh4_KDUixocJtn3XMadgWinVYlt6-G_EDOk4XMAk5pPefkfs1mZjtDupxuQ4r_CgpAgTWAzAAbWXdiUbpu"/>
+</div>
+<p class="font-label-bold text-primary">Mavi Ceket</p>
+<div class="mt-2 text-primary-container">
+<span class="material-symbols-outlined" data-weight="fill">check_circle</span>
+</div>
+</div>
+<!-- Item 2: Locked -->
+<div class="pressable relative bg-surface-container-low border-2 border-surface-dim rounded-lg p-4 card-depth flex flex-col items-center item-locked">
+<div class="w-full aspect-square mb-2 bg-surface-container rounded-md flex items-center justify-center p-2">
+<img alt="Golden rain coat" class="w-full h-full object-contain opacity-50" data-alt="shiny yellow cartoon raincoat for kids, soft 3D style on light gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuADSH6kdc0Qqs1PIS0AioLNGqKJH-IHXMVwfddt41RdUwXzzmT9tquz7nZ8TuKoNijjDEQ_uYb5q6sM223dpFKgQzUhlWdBP1JIkv0PnJDIs90LvpnbFXbJkkWd8zeqwUbUJYqiEgLFGDawJGTJm3RuKMFZX80fycc1d-f7El1Sft-Nf2XA8GgqrCqlzcGcE_qw9rJW7IgxY4PtVODNViOVQNcowTr8jheu2pFVZs6Jw3GpFI7AUiSFZv5qtQichMdpayy4MqWc_mJB"/>
+</div>
+<p class="font-label-bold text-outline">Altın Yağmurluk</p>
+<div class="mt-2 bg-secondary text-white px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-weight="fill">lock</span>
+<span class="text-xs font-bold">50 Yıldız</span>
+</div>
+</div>
+<!-- Item 3: Available but not active -->
+<div class="pressable relative bg-white border-2 border-surface-dim rounded-lg p-4 card-depth flex flex-col items-center">
+<div class="w-full aspect-square mb-2 bg-tertiary-fixed rounded-md flex items-center justify-center p-2">
+<img alt="Green forest shirt" class="w-full h-full object-contain" data-alt="cute green cartoon safari shirt with badges, soft 3D style on mint background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAog9E5wTWZ5_llxQe1wO2F_6-kBqtHHb4efMX8vBn-w6xgZecxYGYQEuZgC8ubnQX_u7BjbVNYMaFBN8xDvhmAX1mxPplW5ZsWVt21Rp3dpDomusyH7Fg7XyfRppDnfON0Put4PyVMa9TL2QB8U_z-xyFpxxWKYuc19etPCRB2dmVfsaOQikRkkOMGYs5jseYJDOYJEMZ7moLoPK0WPgQVelTANnrn83mLHr-6Z62IhqljW9XMsFDV7rP592PCoIsZurHNDl-9HENd"/>
+</div>
+<p class="font-label-bold text-on-surface">Orman Gömleği</p>
+<div class="mt-2 text-transparent">
+<span class="material-symbols-outlined">circle</span>
+</div>
+</div>
+<!-- Item 4: Locked -->
+<div class="pressable relative bg-surface-container-low border-2 border-surface-dim rounded-lg p-4 card-depth flex flex-col items-center item-locked">
+<div class="w-full aspect-square mb-2 bg-surface-container rounded-md flex items-center justify-center p-2">
+<img alt="Red swift boots" class="w-full h-full object-contain opacity-50" data-alt="magical red cartoon sneakers with wings, soft 3D style on light gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRUHBlWTsjyVtRybCJ-wZ1TL5ySvQQdgXWOR_TZLHKH8L1-DvxJz9gVjMwqCA3abwcBEC22dcDgWVcegyHBg0_iIDBsdnL1hNsU3MIxOsqBSOJj3wpDwcnYGjCoszK2VZbVEOAavDpjgrhbzJdCITcp23cRAHBXr2MkfNncoLISE9PG59Zl_N1deskQMLQitYW7Cu6A5IJMsQSpFuhmOQKOLPpJVZAB9BDZOgb3dGr3TEIazKch7XzbRp3Wss-n0VHgmh44sN45wFb"/>
+</div>
+<p class="font-label-bold text-outline">Hızlı Botlar</p>
+<div class="mt-2 bg-secondary text-white px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-weight="fill">lock</span>
+<span class="text-xs font-bold">75 Yıldız</span>
+</div>
+</div>
+<!-- Item 5: Locked -->
+<div class="pressable relative bg-surface-container-low border-2 border-surface-dim rounded-lg p-4 card-depth flex flex-col items-center item-locked">
+<div class="w-full aspect-square mb-2 bg-surface-container rounded-md flex items-center justify-center p-2">
+<img alt="Space explorer suit" class="w-full h-full object-contain opacity-50" data-alt="white futuristic cartoon space explorer jacket, soft 3D style on light gray background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQnbo39HPdEbiPpeRq2rCMQD2s8yrb9A3a5L8X32sHdaKCVRuy0IlMiLg8krOpWT_VlCpwNyhhxuMpdHEe7LHtSCWzfXRJ7rss3sJ58qcrfeynAC_El92-XuxidyUn_p44tA0jII2SBAgUfmbM9ZrHiKiL2Le_tqFubttBTLTh_RrbJWuInqkWgXXY1qlHIRxRHvCgvk1VBSCBzivUX_WkU5v1vho6E8uS_DNYdqt_kqYfycaeMS3aTartLElqGUzYlsvrqmKMjYBt"/>
+</div>
+<p class="font-label-bold text-outline">Uzay Giysisi</p>
+<div class="mt-2 bg-secondary text-white px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" data-weight="fill">lock</span>
+<span class="text-xs font-bold">150 Yıldız</span>
+</div>
+</div>
+<!-- Item 6: Available but not active -->
+<div class="pressable relative bg-white border-2 border-surface-dim rounded-lg p-4 card-depth flex flex-col items-center">
+<div class="w-full aspect-square mb-2 bg-secondary-fixed rounded-md flex items-center justify-center p-2">
+<img alt="Desert explorer vest" class="w-full h-full object-contain" data-alt="beige cartoon tactical explorer vest, soft 3D style on sandy background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjFL03KrakfYbjkygyfAv6wV-VKfuSESwYLnvehrqLUzqiaEE-usJFL3IvDoU_zj4OaND24YjWQ2Vf20NSdM0tbr_6TEjNFdyM46Ldqxc6o-aEOY0ON0xBTRkJo_s8NfZ8owEc7rCEOBdE5Xkjiy_uhsQnMwWFf49yq3qLyRNHfYmqZL4jGilgYHt8txv9MjMLdcQ2rGiCIdoXT7qxLs0pVceq_8XiaClvsZVSYdzZR2djPGD8eZ2OvlMMgsxEo0xQ8rJHipgk3Ixh"/>
+</div>
+<p class="font-label-bold text-on-surface">Çöl Yeleği</p>
+<div class="mt-2 text-transparent">
+<span class="material-symbols-outlined">circle</span>
+</div>
+</div>
+</section>
+<!-- Feedback Interaction Area -->
+<div class="bg-tertiary-container text-white p-6 rounded-xl flex items-center gap-4 border-b-4 border-on-tertiary-fixed-variant">
+<div class="w-16 h-16 bg-white rounded-full flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-tertiary text-4xl" data-weight="fill">auto_fix_high</span>
+</div>
+<div>
+<p class="font-label-bold">Harika görünüyorsun!</p>
+<p class="text-sm">Yeni kıyafetlerini seçmek için yeterli yıldızın var mı? Maceraya devam et!</p>
+</div>
+</div>
+</main>
+<!-- BottomNavBar -->
+<footer class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white dark:bg-slate-900 rounded-t-[40px] border-t-4 border-sky-100 dark:border-slate-800 shadow-[0_-4px_15px_0_rgba(0,0,0,0.05)]">
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:translate-y-1 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="map">map</span>
+<span class="font-lexend font-medium text-[12px]">Harita</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-sky-100 dark:bg-sky-900/30 text-sky-700 dark:text-sky-200 rounded-full px-5 py-2 shadow-[0_4px_0_0_#4CB9E7] active:translate-y-1 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="styler">styler</span>
+<span class="font-lexend font-medium text-[12px]">Gardırop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:translate-y-1 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="backpack">backpack</span>
+<span class="font-lexend font-medium text-[12px]">Çanta</span>
+</button>
+<button class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2 hover:bg-sky-50 dark:hover:bg-slate-800 active:translate-y-1 transition-all duration-75">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-lexend font-medium text-[12px]">Ayarlar</span>
+</button>
+</footer>
+</body></html>

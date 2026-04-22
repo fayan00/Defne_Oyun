@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+
+<html lang="tr"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Türkçe Macerası - Kelime Avı</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-fixed-dim": "#70d2ff",
+                    "on-secondary": "#ffffff",
+                    "inverse-primary": "#70d2ff",
+                    "outline": "#6e797f",
+                    "surface-container": "#edeeef",
+                    "on-tertiary-fixed-variant": "#005234",
+                    "tertiary-fixed-dim": "#56de9f",
+                    "secondary-fixed": "#ffe173",
+                    "on-tertiary-fixed": "#002112",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#e8c426",
+                    "surface-tint": "#006686",
+                    "surface": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "surface-container-high": "#e7e8e9",
+                    "on-tertiary": "#ffffff",
+                    "primary": "#006686",
+                    "on-background": "#191c1d",
+                    "surface-container-low": "#f3f4f5",
+                    "on-secondary-fixed": "#221b00",
+                    "surface-dim": "#d9dadb",
+                    "on-surface-variant": "#3e484e",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-primary-fixed": "#001e2b",
+                    "secondary-container": "#fdd73b",
+                    "inverse-surface": "#2e3132",
+                    "surface-variant": "#e1e3e4",
+                    "on-surface": "#191c1d",
+                    "on-secondary-fixed-variant": "#554500",
+                    "tertiary": "#006c46",
+                    "error": "#ba1a1a",
+                    "secondary": "#705d00",
+                    "on-tertiary-container": "#004b2f",
+                    "tertiary-fixed": "#75fbb9",
+                    "on-primary-container": "#00475e",
+                    "primary-container": "#4cb9e7",
+                    "on-error-container": "#93000a",
+                    "on-primary-fixed-variant": "#004d66",
+                    "primary-fixed": "#c0e8ff",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9fa",
+                    "outline-variant": "#bdc8cf",
+                    "surface-bright": "#f8f9fa",
+                    "tertiary-container": "#36c487",
+                    "on-secondary-container": "#715d00",
+                    "surface-container-highest": "#e1e3e4"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "unit": "8px",
+                    "element-gap-lg": "32px",
+                    "element-gap-md": "16px",
+                    "element-gap-sm": "8px",
+                    "container-margin": "24px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "label-bold": ["Lexend"],
+                    "headline-lg": ["Lexend"],
+                    "headline-md": ["Lexend"],
+                    "body-lg": ["Lexend"],
+                    "body-md": ["Lexend"],
+                    "headline-xl": ["Lexend"]
+            },
+            "fontSize": {
+                    "label-bold": ["16px", {"lineHeight": "24px", "letterSpacing": "0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-lg": ["20px", {"lineHeight": "30px", "fontWeight": "400"}],
+                    "body-md": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-xl": ["40px", {"lineHeight": "48px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .balloon-float {
+            animation: float 4s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body-md overflow-hidden">
+<!-- TopAppBar (Shared Component) -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 h-20 bg-[#4CB9E7] dark:bg-sky-900 text-white dark:text-sky-50 rounded-b-[32px] border-b-4 border-sky-600/30 shadow-[0_6px_0_0_#3182ce]">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-3xl hover:scale-105 transition-transform active:translate-y-1 active:shadow-none">arrow_back</button>
+<h1 class="font-lexend font-bold tracking-wide text-2xl drop-shadow-md">Learning Adventure</h1>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 bg-white/20 px-4 py-2 rounded-full border-b-2 border-white/10">
+<span class="material-symbols-outlined text-red-400" style="font-variation-settings: 'FILL' 1;">favorite</span>
+<span class="font-bold text-xl">3</span>
+</div>
+<div class="bg-white/20 px-4 py-2 rounded-full border-b-2 border-white/10">
+<span class="font-lexend font-bold text-xl tracking-tight">⭐ 125</span>
+</div>
+</div>
+</header>
+<main class="relative h-screen w-full pt-20 pb-32 flex flex-col items-center justify-center bg-gradient-to-b from-primary-fixed to-surface">
+<!-- Background Forest Scene (Decorative) -->
+<div class="absolute inset-0 z-0 opacity-40 pointer-events-none">
+<div class="absolute bottom-0 w-full h-1/2 bg-gradient-to-t from-tertiary/20 to-transparent"></div>
+<img alt="Enchanted forest background" class="w-full h-full object-cover" data-alt="whimsical enchanted forest with tall pine trees, soft morning mist, and warm sunlight filtering through leaves in a cartoon illustration style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3pIs-vz-4J_Za0xS94wVzh2-nK2Dq1gzXodkuHUCLyC2JbyuRPpEvreZel-3Evy_LLgZEiEY7TdRGVWc5zxECHuxCWt9mMJ7xuBmSi_wBB9Ev9ggUE7g_eJHeH4aS7l6VrzASUeQ4k4ogMUUQDjAee7Vj22M8d9Y7cmtlYK_HRmpUCS4SE-MdLxGXKwBdtLobgbRnL43-FIF_Xif0zZ_9fO4eNgOTbK1PpHM8oE2lVLvfiNV1a37bTJWVOQ_5QiNZ0AR8ycw-VZBe"/>
+</div>
+<!-- Question Section -->
+<section class="relative z-10 w-full max-w-2xl px-container-margin text-center">
+<div class="bg-white/90 backdrop-blur-md rounded-xl p-element-gap-lg border-b-[6px] border-primary-container shadow-xl">
+<div class="flex justify-center mb-4">
+<img alt="Buddy" class="w-24 h-24 rounded-full border-4 border-primary-container shadow-md" data-alt="cute happy dog character wearing a little explorer hat in a bright cartoon 3D style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUajjSbgWa44uT6lY57o8E9LNCUdqLqJaeNKDSYnzq1qlZXoTSFWdjptDcD-GcOMDcPeNo1rS52LpPPyR_HjWYvYY79AoJQ-sMIjvYdiM-xGfEg5954N7JV35wjNaVQUzXqVWPflimaQQ3xUKS7ytjV_hW7Es4dWKzCmFg6gM9qclacTQstEilaezoIqy-5Wti2YnAfJT06o0hPliYhLY1WMg1L-QGKIL30HIT9BmPV_EKqh0jBik-3zhSUYBhijyi5PYqSUXy1Wvd"/>
+</div>
+<h2 class="font-headline-lg text-primary mb-2">Kelime Avı</h2>
+<div class="inline-block bg-secondary-container px-6 py-3 rounded-full border-b-4 border-on-secondary-container/30 mb-4">
+<p class="font-headline-md text-on-secondary-fixed-variant">Zıt anlamlısını bul: <span class="font-black underline">Büyük</span></p>
+</div>
+<!-- Progress Bar -->
+<div class="w-full bg-surface-container rounded-full h-6 relative mt-4 border-2 border-outline-variant overflow-hidden">
+<div class="bg-tertiary-container h-full w-2/3 flex items-center justify-end pr-2">
+<span class="material-symbols-outlined text-white text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Interactive Options (Balloons) -->
+<section class="relative z-10 w-full max-w-4xl mt-element-gap-lg grid grid-cols-3 gap-gutter px-container-margin">
+<!-- Option 1: Küçük -->
+<div class="balloon-float flex flex-col items-center" style="animation-delay: 0.1s">
+<button class="group relative w-full aspect-[4/5] bg-tertiary-container hover:scale-105 active:translate-y-2 active:shadow-none transition-all rounded-[100px_100px_80px_80px] border-b-[8px] border-on-tertiary-container/30 shadow-lg flex flex-col items-center justify-center gap-2">
+<span class="font-headline-md text-white font-black">Küçük</span>
+<div class="w-1 h-20 bg-outline-variant/30 rounded-full absolute -bottom-20 left-1/2 -translate-x-1/2"></div>
+</button>
+</div>
+<!-- Option 2: Uzun -->
+<div class="balloon-float flex flex-col items-center" style="animation-delay: 0.5s">
+<button class="group relative w-full aspect-[4/5] bg-primary-container hover:scale-105 active:translate-y-2 active:shadow-none transition-all rounded-[100px_100px_80px_80px] border-b-[8px] border-on-primary-container/30 shadow-lg flex flex-col items-center justify-center gap-2">
+<span class="font-headline-md text-white font-black">Uzun</span>
+<div class="w-1 h-16 bg-outline-variant/30 rounded-full absolute -bottom-16 left-1/2 -translate-x-1/2"></div>
+</button>
+</div>
+<!-- Option 3: Geniş -->
+<div class="balloon-float flex flex-col items-center" style="animation-delay: 0.3s">
+<button class="group relative w-full aspect-[4/5] bg-secondary-container hover:scale-105 active:translate-y-2 active:shadow-none transition-all rounded-[100px_100px_80px_80px] border-b-[8px] border-on-secondary-container/30 shadow-lg flex flex-col items-center justify-center gap-2">
+<span class="font-headline-md text-on-secondary-fixed-variant font-black">Geniş</span>
+<div class="w-1 h-24 bg-outline-variant/30 rounded-full absolute -bottom-24 left-1/2 -translate-x-1/2"></div>
+</button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Shared Component) -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-4 bg-white dark:bg-slate-900 rounded-t-[40px] border-t-4 border-sky-100 dark:border-sky-800 shadow-[0_-8px_20px_rgba(0,0,0,0.05)]">
+<a class="text-slate-400 dark:text-slate-500 flex flex-col items-center gap-1 hover:text-sky-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-3xl">map</span>
+<span class="font-lexend font-extrabold text-xs uppercase">Map</span>
+</a>
+<a class="bg-yellow-400 dark:bg-yellow-500 text-sky-900 rounded-2xl px-6 py-2 shadow-[0_4px_0_0_#ca8a04] scale-110 flex flex-col items-center gap-1 active:scale-90 transition-all duration-150" href="#">
+<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">videogame_asset</span>
+<span class="font-lexend font-extrabold text-xs uppercase">Games</span>
+</a>
+<a class="text-slate-400 dark:text-slate-500 flex flex-col items-center gap-1 hover:text-sky-500 transition-colors active:scale-90 duration-150" href="#">
+<span class="material-symbols-outlined text-3xl">person</span>
+<span class="font-lexend font-extrabold text-xs uppercase">Profile</span>
+</a>
+</nav>
+<!-- Correct Feedback Overlay (Hidden by default, used for animation reference) -->
+<div class="fixed inset-0 bg-white/40 z-[100] flex items-center justify-center pointer-events-none opacity-0">
+<div class="text-[120px]">✨🎉✨</div>
+</div>
+</body></html>
