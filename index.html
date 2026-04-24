@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Balon Patlatma Oyunu</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header class="hud">
+        <h1>Balon Patlatma</h1>
+        <div class="hud-stats">
+          <p>Skor: <span id="score">0</span></p>
+          <p>Süre: <span id="time">30</span>s</p>
+          <p>Can: <span id="lives">5</span></p>
+        </div>
+        <button id="restartBtn" type="button">Yeniden Başlat</button>
+      </header>
+
+      <section id="gameArea" aria-label="Oyun alanı"></section>
+
+      <section class="message-box" id="messageBox">
+        <h2 id="messageTitle">Hazır mısın?</h2>
+        <p id="messageText">Başlatmak için yeniden başlat butonuna bas.</p>
+      </section>
+    </main>
+
+    <script src="game.js"></script>
+  </body>
+</html>
